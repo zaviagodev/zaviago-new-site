@@ -8,32 +8,66 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
+import { ReactNode } from "react"
+import { Button } from "./ui/button"
 
-interface MenuCompProps {
-    trigger: string
-    link?: string
+interface MenusProps {
+  title: string
+  link: string
+  content?: ReactNode
 }
 
 const Header = () => {
+  const menus: MenusProps[] = [
+    {
+      title: "Our Products",
+      link: "/products"
+    },
+    {
+      title: "TEST",
+      link:"/test",
+      content:(
+        <>HUH?!</>
+      )
+    },
+    {
+      title: "Pricing",
+      link: "https://page.line.me/zaviago"
+    }
+  ]
   return (
-    <header className="flex items-center px-10 py-[5px] h-[70px] bg-[#FFFFFF52] fixed top-0 left-0 w-full opacity-1 z-[99]" style={{backdropFilter:"blur(10px)"}}>
-      <Link href="/">
-        <ZaviagoFullLogo />
-      </Link>
-      <NavigationMenu>
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="p-6">
-                <NavigationMenuLink>Link</NavigationMenuLink>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
+    <header className="header" style={{backdropFilter:"blur(10px)"}}>
+      <div className="main-container flex items-center justify-between">
+        <nav className="flex items-center">
+          <Link href="/">
+            <ZaviagoFullLogo />
+          </Link>
+          <NavigationMenu>
+            <NavigationMenuList>
+              {menus.map(menu => (
+                <NavigationMenuItem key={menu.title}>
+                  {menu.content ? (
+                    <div className="relative">
+                      <NavigationMenuTrigger>{menu.title}</NavigationMenuTrigger>
+                      <NavigationMenuContent className="p-6">
+                        {menu.content}
+                      </NavigationMenuContent>
+                    </div>
+                  ) : (
+                    <Link href={menu.link} legacyBehavior passHref>
+                      <NavigationMenuLink className={navigationMenuTriggerStyle()}>{menu.title}</NavigationMenuLink>
+                    </Link>
+                  )}
+                </NavigationMenuItem>
+              ))}
+            </NavigationMenuList>
+          </NavigationMenu>
+        </nav>
+        <Button variant="ghost">Sign in</Button>
+      </div>
     </header>
   )
 }
