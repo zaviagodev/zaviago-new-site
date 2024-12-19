@@ -40,7 +40,7 @@ export default function RootLayout({
         className={`${graphikth.variable} antialiased`}
       >
         {/* <Header /> */}
-        <main className="py-20 px-10">
+        <main className="py-20">
           {children}
         </main>
       </body>

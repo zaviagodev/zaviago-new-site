@@ -68,7 +68,13 @@ export default {
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
   			},
-			shadegray:"#0303037D"
+			shadegray:{
+				DEFAULT:"#0303037D",
+				100:"#0303037D",
+				200:"#8D8E91",
+				300:"#31373D"
+			},
+			mainpurple:"#3d08ff"
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
