@@ -1,9 +1,10 @@
 import MainDashboard from "@/components/dashboard/main-dashboard";
-import Image from "next/image";
 import ViewMoreSheet from "@/components/main/ViewMoreSheet";
 import { Bento } from "@/components/main/Bento";
-import { orderManagementSystems, storefrontSystems, trustedBrands, siteBuilderSystems, lineOASystems } from "./data";
+import { orderManagementSystems, storefrontSystems, trustedBrands, siteBuilderSystems, lineOASystems, ImgList } from "./data";
 import HeroVideoDialog from "@/components/ui/hero-video-dialog";
+import { textGradient } from "@/lib/utils";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -11,12 +12,14 @@ export default function Home() {
       <section className="flex flex-col gap-10 text-center px-10">
         {/* TODO: paste image of swappers */}
         <h1>IMAGE WILL BE PASTED SOON!</h1>
-        <h1 className="text-[#1D1E20] text-[78px] font-semibold leading-[1.2em] tracking-[-0.8px]">
+        <h1 className="text-[#1D1E20] text-[42px] md:text-[78px] font-semibold leading-[1.2em] tracking-[-0.8px]">
           จัดการงานและธุรกิจ<br/>
           <span className="text-mainpurple">ทั้งหมด</span>
           ของคุณ
         </h1>
         <p className="text-shadegray font-semibold">แพลตฟอร์ม WorkSuite ตั้งแต่จัดการธุรกิจ จัดการโปรเจ็ค, สร้างเว็บไซต์, ขายสินค้า , <br/>จัดการคำสั่งซื้อ ระบบ CRM และ Point & Reward จนถึง ระบบรวมแชท</p>
+
+        <Link href="https://dashboard.zaviago.com/">เริ่มใช้ฟรี</Link>
 
         <aside className="overflow-hidden relative shadow-main rounded-lg">
           <MainDashboard />
@@ -27,15 +30,15 @@ export default function Home() {
         <div className="flex gap-12 items-center w-full">
           <p className="text-xs text-shadegray-200 font-medium">Trusted by industry leaders and innovators</p>
           <ul className="flex justify-between items-center w-full">
-            {trustedBrands.map(brand => <Image key={brand.alt} src={brand.img} alt={brand.alt} className={brand.className}/>)}
+            <ImgList list={trustedBrands}/>
           </ul>
         </div>
         {/* Translation: Integrate with business management system, orders, stocks, customers for every platform */}
-        <h1 className="text-[56px] font-semibold leading-[1.2em] tracking-[-0.8px] text-shadegray-300">ระบบ <span className="text-mainpurple">จัดการธุรกิจ</span> ออเดอร์,<br/> สต็อก, ลูกค้า , เชื่อมต่อได้ทุก<br/>แพลตฟอร์ม</h1>
+        <h1 className="text-3xl md:text-[56px] font-semibold leading-[1.2em] tracking-[-0.8px] text-shadegray-300">ระบบ <span className="text-mainpurple">จัดการธุรกิจ</span> ออเดอร์,<br/> สต็อก, ลูกค้า , เชื่อมต่อได้ทุก<br/>แพลตฟอร์ม</h1>
         <div className="flex flex-col gap-5 w-full">
           <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
           <ul className="flex items-center gap-8 w-full">
-            {orderManagementSystems.map(brand => <Image key={brand.alt} src={brand.img} alt={brand.alt} className={brand.className}/>)}
+            <ImgList list={orderManagementSystems}/>
           </ul>
         </div>
       </section>
@@ -56,13 +59,13 @@ export default function Home() {
 
       <section className="flex flex-col py-[175px] bg-[#fafafa] text-center px-10 gap-10">
         <div className="max-w-[900px] mx-auto w-full">
-          <h1 className="font-semibold text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300"><span className="text-mainpurple">ระบบเว็บไซต์</span> ขายสินค้า<br/> และสร้าง <span className="text-mainpurple">ร้านค้าออนไลน์</span><br/>ใหม่ของคุณ</h1>
+          <h1 className="font-semibold text-3xl md:text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300"><span className="text-mainpurple">ระบบเว็บไซต์</span> ขายสินค้า<br/> และสร้าง <span className="text-mainpurple">ร้านค้าออนไลน์</span><br/>ใหม่ของคุณ</h1>
         </div>
 
         <div className="flex flex-col gap-2 w-full items-center">
           <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
           <ul className="flex items-center justify-center gap-8 w-full">
-            {storefrontSystems.map(brand => <Image key={brand.alt} src={brand.img} alt={brand.alt} className={brand.className}/>)}
+            <ImgList list={storefrontSystems}/>
           </ul>
         </div>
 
@@ -79,13 +82,13 @@ export default function Home() {
         </ViewMoreSheet>
       </section>
 
-      <section className="flex flex-col gap-10 max-w-[900px] mx-auto w-full py-[198px]">
-        <h1 className="font-semibold text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300 text-center">สร้างเว็บไซต์สุดปังและฟรี<br/> คุณเองก็ทำได้</h1>
+      <section className="flex flex-col gap-10 max-w-[900px] mx-auto w-full px-10 py-[198px]">
+        <h1 className="font-semibold text-3xl md:text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300 text-center">สร้างเว็บไซต์สุดปังและฟรี<br/> คุณเองก็ทำได้</h1>
 
         <div className="flex flex-col gap-5 w-full items-center">
           <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
           <ul className="flex items-center justify-center gap-8 w-full">
-            {siteBuilderSystems.map(brand => <Image key={brand.alt} src={brand.img} alt={brand.alt} className={brand.className}/>)}
+            <ImgList list={siteBuilderSystems}/>
           </ul>
         </div>
 
@@ -100,7 +103,7 @@ export default function Home() {
           <h2 className="p-12">รองรับทั้งคอมพิวเตอร์ และแท็บเล็ต ไม่ต้องลงโปรแกรม เปิดผ่านเบราว์เซอร์ ใช้งานสะดวกไม่ว่าจะทำที่ไหนก็ตามใจคุณ</h2>
         </div>
 
-        <h1 className="font-semibold text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300">ทำเว็บไซต์ที่ทรงพลัง ใช้งานง่ายเพียงปลายนิ้วสัมผัส</h1>
+        <h1 className="font-semibold text-3xl md:text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300">ทำเว็บไซต์ที่ทรงพลัง ใช้งานง่ายเพียงปลายนิ้วสัมผัส</h1>
         <HeroVideoDialog videoSrc="https://youtu.be/BpUxrR34t58"/>
 
         <h2 className="font-medium text-2xl text-left text-shadegray-200 p-12">สัมผัสประสบการณ์ความเป็นไปได้แบบไร้ขอบเขตด้วยเทมเพลตมืออาชีพให้การนำเสนอเว็บไซต์ของคุณเป็นไปได้อย่าง่ายดาย</h2>
@@ -110,13 +113,13 @@ export default function Home() {
         </ViewMoreSheet>
       </section>
 
-      <section className="flex flex-col gap-10 max-w-[900px] mx-auto w-full py-20">
-        <h1 className="font-semibold text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300">เก็บข้อมูลสมาชิก <span className="text-mainpurple">ระบบสะสมแต้ม</span> และแลก <span className="text-mainpurple">ของรางวัล</span> ผ่าน Line OA</h1>
+      <section className="flex flex-col gap-10 max-w-[900px] mx-auto w-full px-10 py-20">
+        <h1 className="font-semibold text-3xl md:text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300">เก็บข้อมูลสมาชิก <span className="text-mainpurple">ระบบสะสมแต้ม</span> และแลก <span className="text-mainpurple">ของรางวัล</span> ผ่าน Line OA</h1>
       
         <div className="flex flex-col gap-5 w-full">
           <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
           <ul className="flex items-center gap-8 w-full">
-            {lineOASystems.map(brand => <Image key={brand.alt} src={brand.img} alt={brand.alt} className={brand.className}/>)}
+            <ImgList list={lineOASystems} />
           </ul>
         </div>
 
@@ -132,7 +135,7 @@ export default function Home() {
         </ViewMoreSheet>
       </section>
 
-      <section className="max-w-[900px] mx-auto w-full">
+      <section className="max-w-[900px] mx-auto w-full px-10">
         <h1>เปิดระบบผ่านไลน์ของธุรกิจคุณได้ โดยไม่ต้องมีแอปเพิ่ม</h1> {/* LINE Features */}
         <h1>สมัครง่ายด้วยระบบที่เชื่อมต่อไลน์ไอดีและเบอร์ลูกค้า</h1> {/* Register with LINE via phone number and/or Line ID */}
         <h1>มีหน้าระบบสมาชิกและการแลกของรางวัลเหมือน ซูปเปอร์แอปต่างๆในตลาด</h1>
@@ -142,15 +145,49 @@ export default function Home() {
 
       <section className="flex flex-col items-center py-[175px] bg-[#fafafa] px-10 gap-10">
         <div className="max-w-[900px] mx-auto w-full flex flex-col items-center">
-          <h1 className="font-semibold text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300">มีระบบ <span className="text-mainpurple">รวมแชทในที่เดียว</span><br/> ดูแลลูกค้าพร้อมกันได้หลายแพลตฟอร์ม</h1>
+          <h1 className="font-semibold text-3xl md:text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300">มีระบบ <span className="text-mainpurple">รวมแชทในที่เดียว</span><br/> ดูแลลูกค้าพร้อมกันได้หลายแพลตฟอร์ม</h1>
         
-          <h1 className="max-w-[490px] font-semibold text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300">เพิ่มประสิทธิภาพทีม<br/>แอดมินในการดูแล</h1>
+          <h1 className="max-w-[490px] font-semibold text-3xl md:text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300">เพิ่มประสิทธิภาพทีม<br/>แอดมินในการดูแล</h1>
 
           <div className="max-w-[490px] flex flex-col gap-5 pt-20">
-            <h1 className="font-semibold text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300">ตอบโจทย์การดูแล<br/>แชทครบวงจร</h1>
+            <h1 className="font-semibold text-3xl md:text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300">ตอบโจทย์การดูแล<br/>แชทครบวงจร</h1>
             <h2 className="font-medium text-2xl text-left text-shadegray-200">รองรับการแชทหลากหลายช่องทาง ทั้ง <span className="text-mainpurple">FB Messenger, Instagram, LINE Official, Telegram</span> และอื่นๆ ตอบสะดวก บริหารจัดการได้สบายในแอปเดียว</h2>
           </div>
         </div>
+
+        <ViewMoreSheet buttonText="More on Team Chat" title="Points & Rewards">
+          Hello
+        </ViewMoreSheet>
+      </section>
+
+      {/* TODO: Insert the background */}
+      <section className="flex flex-col items-center py-20 px-10 gap-5 text-center">
+        <div style={textGradient("linear-gradient(121deg, rgb(0, 117, 224) 9.82214%, rgb(112, 64, 185) 38.0971%, rgb(158, 0, 233) 72.8491%, rgb(158, 0, 233) 100%)")}>
+          <h2 className="font-medium text-xl">Proudly recommended</h2> {/* ขอแนะนำ */}
+          <h1 className="font-recoleta text-[90px] font-bold leading-[110px]">workday.</h1>
+        </div>
+        <p>ระบบจัดการงานและโปรเจ็คการทำงาน</p> {/* Project management system */}
+      </section>
+
+      <section className="flex flex-col items-center py-20 px-10 text-center">
+        <h1 className="font-recoleta text-[60px] font-bold">Data Insight</h1>
+        <p>โปรแกรมสร้าง Data Visualization จากธุรกิจของคุณ</p> {/* Data visualization program from your business */}
+      </section>
+
+      <section className="flex flex-col items-center py-20 px-10 text-center">
+        <h1 className="font-recoleta text-[60px] font-bold">Sales Hub</h1>
+        <p>ซอฟต์แวร์บริหารงานขายที่ครบถ้วน</p> {/* Full sales management platform */}
+      </section>
+
+      <section className="grid md:grid-cols-2">
+        <section className="flex flex-col items-center py-20 px-10 text-center">
+          <h1 className="font-recoleta text-[60px] font-bold">in.store</h1>
+          <p>ซอฟต์แวร์บริหารงานขายที่ครบถ้วน</p>
+        </section>
+        <section className="flex flex-col items-center py-20 px-10 text-center">
+          <h1 className="font-recoleta text-[60px] font-bold">in.front</h1>
+          <p>อุปกรณ์ POS Hardware</p>
+        </section>
       </section>
     </section>
   );
