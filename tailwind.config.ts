@@ -10,9 +10,8 @@ export default {
   theme: {
   	extend: {
   		fontFamily: {
-  			graphik: [
-  				'var(--font-graphik)'
-  			]
+  			graphik: ['var(--font-graphik)'],
+			recoleta: ['var(--font-recoleta)']
   		},
 		boxShadow: {
 			main: 'rgba(68, 46, 89, 0.24) 1px 1px 22px 2px',	

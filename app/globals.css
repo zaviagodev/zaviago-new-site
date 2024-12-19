@@ -91,3 +91,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+.main-container {
+  @apply max-w-[1300px] mx-auto w-full px-10
+}
+
+.header {
+  @apply flex items-center py-[5px] h-[70px] bg-[#FFFFFF52] fixed top-0 left-0 opacity-100 w-full z-[99]
+}
+
+.main-gradient {
+  background:linear-gradient(117deg, rgb(0, 117, 224) 0%, rgb(158, 0, 233) 130.351%)
+}
