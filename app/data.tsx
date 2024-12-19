@@ -14,7 +14,7 @@ import buzzebees from "@/public/buzzebees.png"
 import chococrm from "@/public/chococrm.png"
 import pointspot from "@/public/pointspot.png"
 import connectx from "@/public/connectx.png"
-import { StaticImageData } from "next/image"
+import Image, { StaticImageData } from "next/image"
 
 interface ImgListProps {
     img: StaticImageData
@@ -22,7 +22,11 @@ interface ImgListProps {
     className?: string
 }
 
-export const trustedBrands: ImgListProps[] = [
+export const ImgList = ({ list } : { list:ImgListProps[] }) => {
+    return <>{list.map(brand => <Image key={brand.alt} src={brand.img} alt={brand.alt} className={brand.className}/>)}</>
+}
+
+export const trustedBrands = [
     { img:finlab, alt:"Finlab", className:"h-6 w-auto" },
     { img:uob, alt:"UOB", className:"h-4 w-auto" },
     { img:depa, alt:"Depa", className:"h-8 w-auto" },
