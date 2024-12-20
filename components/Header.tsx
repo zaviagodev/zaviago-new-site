@@ -48,17 +48,17 @@ const Header = () => {
           <NavigationMenu>
             <NavigationMenuList>
               {menus.map(menu => (
-                <NavigationMenuItem key={menu.title}>
+                <NavigationMenuItem key={menu.title} className="text-[#687076] hover:text-black">
                   {menu.content ? (
                     <div className="relative">
-                      <NavigationMenuTrigger>{menu.title}</NavigationMenuTrigger>
+                      <NavigationMenuTrigger className="!bg-transparent">{menu.title}</NavigationMenuTrigger>
                       <NavigationMenuContent className="p-6">
                         {menu.content}
                       </NavigationMenuContent>
                     </div>
                   ) : (
                     <Link href={menu.link} legacyBehavior passHref>
-                      <NavigationMenuLink className={navigationMenuTriggerStyle()}>{menu.title}</NavigationMenuLink>
+                      <NavigationMenuLink className={`${navigationMenuTriggerStyle()} !bg-transparent`}>{menu.title}</NavigationMenuLink>
                     </Link>
                   )}
                 </NavigationMenuItem>
@@ -66,7 +66,7 @@ const Header = () => {
             </NavigationMenuList>
           </NavigationMenu>
         </nav>
-        <Button variant="ghost">Sign in</Button>
+        <Button variant="ghost" className="!bg-transparent text-[#687076] hover:text-black">Sign in</Button>
       </div>
     </header>
   )

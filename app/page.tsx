@@ -1,7 +1,7 @@
 import MainDashboard from "@/components/dashboard/main-dashboard";
 import ViewMoreSheet from "@/components/main/ViewMoreSheet";
 import { Bento } from "@/components/main/Bento";
-import { orderManagementSystems, storefrontSystems, trustedBrands, siteBuilderSystems, lineOASystems, ImgList } from "./data";
+import { orderManagementSystems, storefrontSystems, trustedBrands, siteBuilderSystems, lineOASystems, ImgList, workdaySystems, salesHubSystems, dataInsightSystems, inStoreSystems } from "./data";
 import HeroVideoDialog from "@/components/ui/hero-video-dialog";
 import { textGradient } from "@/lib/utils";
 import Link from "next/link";
@@ -19,7 +19,7 @@ export default function Home() {
         </h1>
         <p className="text-shadegray font-semibold">แพลตฟอร์ม WorkSuite ตั้งแต่จัดการธุรกิจ จัดการโปรเจ็ค, สร้างเว็บไซต์, ขายสินค้า , <br/>จัดการคำสั่งซื้อ ระบบ CRM และ Point & Reward จนถึง ระบบรวมแชท</p>
 
-        <Link href="https://dashboard.zaviago.com/">เริ่มใช้ฟรี</Link>
+        <Link href="https://dashboard.zaviago.com" className="w-fit mx-auto main-gradient text-white px-6 py-2 rounded-xl text-sm font-medium shadow-purple">เริ่มใช้ฟรี</Link>
 
         <aside className="overflow-hidden relative shadow-main rounded-lg">
           <MainDashboard />
@@ -167,22 +167,50 @@ export default function Home() {
           <h1 className="font-recoleta text-[90px] font-bold leading-[110px]">workday.</h1>
         </div>
         <p>ระบบจัดการงานและโปรเจ็คการทำงาน</p> {/* Project management system */}
+
+        <div className="flex flex-col gap-5 w-full items-center">
+          <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
+          <ul className="flex items-center gap-8 w-full justify-center">
+            <ImgList list={workdaySystems}/>
+          </ul>
+        </div>
       </section>
 
-      <section className="flex flex-col items-center py-20 px-10 text-center">
+      <section className="flex flex-col items-center py-20 px-10 text-center gap-5 text-white bg-black">
         <h1 className="font-recoleta text-[60px] font-bold">Data Insight</h1>
         <p>โปรแกรมสร้าง Data Visualization จากธุรกิจของคุณ</p> {/* Data visualization program from your business */}
+
+        <div className="flex flex-col gap-5 w-full items-center">
+          <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
+          <ul className="flex items-center gap-8 w-full justify-center">
+            <ImgList list={dataInsightSystems}/>
+          </ul>
+        </div>
       </section>
 
-      <section className="flex flex-col items-center py-20 px-10 text-center">
+      <section className="flex flex-col items-center py-20 px-10 text-center gap-5">
         <h1 className="font-recoleta text-[60px] font-bold">Sales Hub</h1>
         <p>ซอฟต์แวร์บริหารงานขายที่ครบถ้วน</p> {/* Full sales management platform */}
+
+        <div className="flex flex-col gap-5 w-full items-center">
+          <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
+          <ul className="flex items-center gap-8 w-full justify-center">
+            <ImgList list={salesHubSystems}/>
+          </ul>
+        </div>
       </section>
 
       <section className="grid md:grid-cols-2">
-        <section className="flex flex-col items-center py-20 px-10 text-center">
+        <section className="flex flex-col items-center py-20 px-10 text-center gap-5">
           <h1 className="font-recoleta text-[60px] font-bold">in.store</h1>
           <p>ซอฟต์แวร์บริหารงานขายที่ครบถ้วน</p>
+
+          <div className="flex flex-col gap-5 w-full items-center">
+            <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
+            <ul className="flex items-center gap-8 w-full justify-center">
+              <ImgList list={inStoreSystems}/>
+            </ul>
+          </div>
         </section>
         <section className="flex flex-col items-center py-20 px-10 text-center">
           <h1 className="font-recoleta text-[60px] font-bold">in.front</h1>

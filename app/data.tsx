@@ -14,6 +14,20 @@ import buzzebees from "@/public/buzzebees.png"
 import chococrm from "@/public/chococrm.png"
 import pointspot from "@/public/pointspot.png"
 import connectx from "@/public/connectx.png"
+import ohochat from "@/public/ohochat.png"
+import bizchat from "@/public/bizchat.png"
+import zwizai from "@/public/zwizai.png"
+import zaapi from "@/public/zaapi.png"
+import clickup from "@/public/clickup.png"
+import monday from "@/public/monday.png"
+import notion from "@/public/notion.png"
+import trello from "@/public/trello.png"
+import jubili from "@/public/jubili.png"
+import venio from "@/public/venio.png"
+import powerbi from "@/public/powerbi.png"
+import tableau from "@/public/tableau.png"
+import storehub from "@/public/storehub.png"
+import foodstory from "@/public/foodstory.png"
 import Image, { StaticImageData } from "next/image"
 
 interface ImgListProps {
@@ -41,7 +55,7 @@ export const orderManagementSystems = [
 
 export const storefrontSystems = [
     { img:page365, alt:"Page 365", className:"h-16 w-auto" },
-    { img:makewebeasy, alt:"Make Web Easy", className:"h-6 w-auto" }
+    { img:makewebeasy, alt:"Make Web Easy", className:"h-9 w-auto" }
 ]
 
 export const siteBuilderSystems = [
@@ -56,4 +70,33 @@ export const lineOASystems = [
     { img:chococrm, alt:"ChocoCRM", className:"h-6 w-auto" },
     { img:pointspot, alt:"Pointspot", className:"h-[30px] w-auto" },
     { img:connectx, alt:"ConnectX", className:"h-4 w-auto" }
+]
+
+export const teamChatSystems = [
+    { img:ohochat, alt:"Ohochat", className:"h-8 w-auto" },
+    { img:bizchat, alt:"Bizchat", className:"h-8 w-auto" },
+    { img:zwizai, alt:"Zwiz.ai", className:"h-8 w-auto" },
+    { img:zaapi, alt:"Zaapi", className:"h-8 w-auto" },
+]
+
+export const workdaySystems = [
+    { img:clickup, alt:"Clickup", className:"h-[26px] w-auto" },
+    { img:monday, alt:"Monday", className:"h-[30px] w-auto" },
+    { img:notion, alt:"Notion", className:"h-[30px] w-auto" },
+    { img:trello, alt:"Trello", className:"h-[30px] w-auto" },
+]
+
+export const dataInsightSystems = [
+    { img:powerbi, alt:"Power BI", className:"h-[30px] w-auto" },
+    { img:tableau, alt:"Tableau", className:"h-[30px] w-auto" },
+]
+
+export const salesHubSystems = [
+    { img:jubili, alt:"Jubili", className:"h-6 w-auto" },
+    { img:venio, alt:"Venio", className:"h-6 w-auto" },
+]
+
+export const inStoreSystems = [
+    { img:storehub, alt:"Storehub", className:"h-[14px] w-auto" },
+    { img:foodstory, alt:"Foodstory", className:"h-6 w-auto" },
 ]
