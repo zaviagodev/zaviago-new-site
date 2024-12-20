@@ -103,3 +103,7 @@
 .main-gradient {
   background:linear-gradient(117deg, rgb(0, 117, 224) 0%, rgb(158, 0, 233) 130.351%)
 }
+
+.purple-button {
+  @apply w-fit mx-auto main-gradient text-white px-6 py-2 rounded-xl text-sm font-medium shadow-purple hover:scale-[1.1] transition duration-200
+}

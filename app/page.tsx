@@ -19,7 +19,7 @@ export default function Home() {
         </h1>
         <p className="text-shadegray font-semibold">แพลตฟอร์ม WorkSuite ตั้งแต่จัดการธุรกิจ จัดการโปรเจ็ค, สร้างเว็บไซต์, ขายสินค้า , <br/>จัดการคำสั่งซื้อ ระบบ CRM และ Point & Reward จนถึง ระบบรวมแชท</p>
 
-        <Link href="https://dashboard.zaviago.com" className="w-fit mx-auto main-gradient text-white px-6 py-2 rounded-xl text-sm font-medium shadow-purple">เริ่มใช้ฟรี</Link>
+        <Link href="https://dashboard.zaviago.com" className="purple-button">เริ่มใช้ฟรี</Link>
 
         <aside className="overflow-hidden relative shadow-main rounded-lg">
           <MainDashboard />
@@ -136,11 +136,13 @@ export default function Home() {
       </section>
 
       <section className="max-w-[900px] mx-auto w-full px-10">
-        <h1>เปิดระบบผ่านไลน์ของธุรกิจคุณได้ โดยไม่ต้องมีแอปเพิ่ม</h1> {/* LINE Features */}
-        <h1>สมัครง่ายด้วยระบบที่เชื่อมต่อไลน์ไอดีและเบอร์ลูกค้า</h1> {/* Register with LINE via phone number and/or Line ID */}
-        <h1>มีหน้าระบบสมาชิกและการแลกของรางวัลเหมือน ซูปเปอร์แอปต่างๆในตลาด</h1>
-        <h1>กำหนดและตั้งค่า ระดับสมาชิก เพื่อจัดการสิทธิพิเศษได้</h1>
-        <h1>เช็คคะแนนเรียลไทม์ แสกนและรับของรางวัล หน้าร้านค้าได้เลย</h1>
+        <div className="flex flex-col gap-[200px] text-3xl font-semibold">
+          <h1>เปิดระบบผ่านไลน์ของธุรกิจคุณได้ โดยไม่ต้องมีแอปเพิ่ม</h1> {/* LINE Features */}
+          <h1>สมัครง่ายด้วยระบบที่เชื่อมต่อไลน์ไอดีและเบอร์ลูกค้า</h1> {/* Register with LINE via phone number and/or Line ID */}
+          <h1>มีหน้าระบบสมาชิกและการแลกของรางวัลเหมือน ซูปเปอร์แอปต่างๆในตลาด</h1>
+          <h1>กำหนดและตั้งค่า ระดับสมาชิก เพื่อจัดการสิทธิพิเศษได้</h1>
+          <h1>เช็คคะแนนเรียลไทม์ แสกนและรับของรางวัล หน้าร้านค้าได้เลย</h1>
+        </div>
       </section>
 
       <section className="flex flex-col items-center py-[175px] bg-[#fafafa] px-10 gap-10">

@@ -66,7 +66,10 @@ const Header = () => {
             </NavigationMenuList>
           </NavigationMenu>
         </nav>
-        <Button variant="ghost" className="!bg-transparent text-[#687076] hover:text-black">Sign in</Button>
+        <div className="flex items-center gap-6">
+          <Button variant="ghost" className="!bg-transparent text-[#687076] hover:text-black">Sign in</Button>
+          <Link href="https://dashboard.zaviago.com" className="purple-button">Register</Link>
+        </div>
       </div>
     </header>
   )
