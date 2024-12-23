@@ -61,7 +61,7 @@ const service_cards: ServiceCardProps[] = [
 const ManagePage = () => {
   return (
     <section className="flex flex-col gap-10 pt-20">
-      <section className="flex flex-col gap-10 text-center text-[#1D1E20] px-10">
+      <section className="flex flex-col gap-10 text-center text-shadegray-400 px-10">
         <h1 className="text-[42px] md:text-[78px] font-semibold leading-[1.2em] tracking-[-0.8px]">
           ระบบจัดการธุรกิจ<br/>ครบวงจร
         </h1>

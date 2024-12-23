@@ -11,7 +11,7 @@ export default function Home() {
     <section className="flex flex-col gap-10 pt-20">
       <section className="flex flex-col gap-10 text-center px-10">
         {/* TODO: paste image of swappers */}
-        <h1 className="text-[#1D1E20] text-[42px] md:text-[78px] font-semibold leading-[1.2em] tracking-[-0.8px]">
+        <h1 className="text-shadegray-400 text-[42px] md:text-[78px] font-semibold leading-[1.2em] tracking-[-0.8px]">
           จัดการงานและธุรกิจ<br/>
           <span className="text-mainpurple">ทั้งหมด</span>
           ของคุณ
