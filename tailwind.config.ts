@@ -10,13 +10,17 @@ export default {
   theme: {
   	extend: {
   		fontFamily: {
-  			graphik: ['var(--font-graphik)'],
-			recoleta: ['var(--font-recoleta)']
+  			graphik: [
+  				'var(--font-graphik)'
+  			],
+  			recoleta: [
+  				'var(--font-recoleta)'
+  			]
   		},
-		boxShadow: {
-			main: 'rgba(68, 46, 89, 0.24) 1px 1px 22px 2px',
-			purple: 'rgba(87, 20, 255, 0.4) 0px 0px 12px 1px'
-		},
+  		boxShadow: {
+  			main: 'rgba(68, 46, 89, 0.24) 1px 1px 22px 2px',
+  			purple: 'rgba(87, 20, 255, 0.4) 0px 0px 12px 1px'
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -68,18 +72,40 @@ export default {
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
   			},
-			shadegray:{
-				DEFAULT:"#0303037D",
-				100:"#0303037D",
-				200:"#8D8E91",
-				300:"#31373D"
-			},
-			mainpurple:"#3d08ff"
+  			shadegray: {
+  				'100': '#0303037D',
+  				'200': '#8D8E91',
+  				'300': '#31373D',
+  				DEFAULT: '#0303037D'
+  			},
+  			mainpurple: '#3d08ff'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		keyframes: {
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
+  			}
+  		},
+  		animation: {
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
   		}
   	}
   },

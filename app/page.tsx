@@ -8,16 +8,16 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <section className="flex flex-col gap-10">
+    <section className="flex flex-col gap-10 pt-20">
       <section className="flex flex-col gap-10 text-center px-10">
         {/* TODO: paste image of swappers */}
-        <h1>IMAGE WILL BE PASTED SOON!</h1>
         <h1 className="text-[#1D1E20] text-[42px] md:text-[78px] font-semibold leading-[1.2em] tracking-[-0.8px]">
           จัดการงานและธุรกิจ<br/>
           <span className="text-mainpurple">ทั้งหมด</span>
           ของคุณ
         </h1>
-        <p className="text-shadegray font-semibold">แพลตฟอร์ม WorkSuite ตั้งแต่จัดการธุรกิจ จัดการโปรเจ็ค, สร้างเว็บไซต์, ขายสินค้า , <br/>จัดการคำสั่งซื้อ ระบบ CRM และ Point & Reward จนถึง ระบบรวมแชท</p>
+        <p className="text-shadegray font-semibold">แพลตฟอร์ม WorkSuite ตั้งแต่จัดการธุรกิจ จัดการโปรเจ็ค, สร้างเว็บไซต์, ขายสินค้า , <br/>จัดการคำสั่งซื้อ ระบบ CRM และ Point & Reward จนถึง ระบบรวมแชท</p>      <h1>IMAGE WILL BE PASTED SOON!</h1>
+        
 
         <Link href="https://dashboard.zaviago.com" className="purple-button">เริ่มใช้ฟรี</Link>
 
@@ -217,6 +217,17 @@ export default function Home() {
         <section className="flex flex-col items-center py-20 px-10 text-center">
           <h1 className="font-recoleta text-[60px] font-bold">in.front</h1>
           <p>อุปกรณ์ POS Hardware</p>
+        </section>
+      </section>
+
+      <section className="grid md:grid-cols-2">
+        <section className="flex flex-col items-center py-20 px-10 text-center gap-5">
+          <h1 className="font-recoleta text-[60px] font-bold">hr.space</h1>
+          <p>HRM โปรแกรมบริหารพนักงาน</p>
+        </section>
+        <section className="flex flex-col items-center py-20 px-10 text-center">
+          <h1 className="font-recoleta text-[60px] font-bold">Drive</h1>
+          <p>เก็บไฟล์และอัฟโหลดไฟล์ของคุณ</p>
         </section>
       </section>
     </section>

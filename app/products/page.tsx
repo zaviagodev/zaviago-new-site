@@ -39,6 +39,8 @@ const Products = () => {
             <ImgList list={lineOASystems}/>
           </ul>
         </div>
+
+        <p className="text-center">IMAGE FOR POINTS AND REWARDS</p>
       </section>
 
       <section className="p-10 bg-black text-white flex flex-col gap-10">
@@ -54,6 +56,8 @@ const Products = () => {
             <ImgList list={storefrontSystems}/>
           </ul>
         </div>
+
+        <p className="text-center">IMAGE FOR STOREFRONT</p>
       </section>
 
       <section className="p-10 bg-[#FCFBFE] flex flex-col gap-10">
@@ -68,6 +72,8 @@ const Products = () => {
             <ImgList list={teamChatSystems}/>
           </ul>
         </div>
+
+        <p className="text-center">IMAGE FOR TEAMCHAT</p>
       </section>
     </section>
   )

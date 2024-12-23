@@ -52,7 +52,7 @@ const Header = () => {
                   {menu.content ? (
                     <div className="relative">
                       <NavigationMenuTrigger className="!bg-transparent">{menu.title}</NavigationMenuTrigger>
-                      <NavigationMenuContent className="p-6">
+                      <NavigationMenuContent className="p-6 left-0">
                         {menu.content}
                       </NavigationMenuContent>
                     </div>
