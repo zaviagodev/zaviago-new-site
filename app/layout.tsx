@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from 'next/font/local';
 import "./globals.css";
 import Header from "@/components/Header";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const graphikth = localFont({
   src: [
@@ -55,10 +56,17 @@ export default function RootLayout({
       <body
         className={`${graphikth.variable} ${recoleta.variable} antialiased`}
       >
-        <Header />
-        <main className="py-20">
-          {children}
-        </main>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          <main className="py-20">
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );

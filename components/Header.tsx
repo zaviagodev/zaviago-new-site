@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import { ZaviagoFullLogo } from "./images/ZaviagoLogo"
 import {
@@ -13,6 +15,8 @@ import {
 } from "@/components/ui/navigation-menu"
 import { ReactNode } from "react"
 import { Button } from "./ui/button"
+import { useTheme } from "next-themes"
+import { Moon, Sun } from "lucide-react"
 
 interface MenusProps {
   title: string
@@ -21,16 +25,45 @@ interface MenusProps {
 }
 
 const Header = () => {
+  const { setTheme, theme } = useTheme()
+  const handleSwitchTheme = () => {
+    if (theme === "light"){
+      setTheme("dark")
+    } else {
+      setTheme("light")
+    }
+  }
   const menus: MenusProps[] = [
     {
       title: "Our Products",
       link: "/products"
     },
     {
-      title: "TEST",
+      title: "Features",
       link:"/test",
       content:(
-        <>HUH?!</>
+        <div className="flex flex-col gap-2">
+          <Link href="/manage">
+            <Button variant="ghost" className="w-full justify-start">Manage</Button>
+          </Link>
+          <Link href="/marketplaces">
+            <Button variant="ghost" className="w-full justify-start">Marketplaces</Button>
+          </Link>
+        </div>
+      )
+    },
+    {
+      title: "About us",
+      link:"/test",
+      content:(
+        <div className="flex flex-col gap-2">
+          <Link href="/investor">
+            <Button variant="ghost" className="w-full justify-start">Investors</Button>
+          </Link>
+          <Link href="/marketplaces">
+            <Button variant="ghost" className="w-full justify-start">Marketplaces</Button>
+          </Link>
+        </div>
       )
     },
     {
@@ -52,7 +85,7 @@ const Header = () => {
                   {menu.content ? (
                     <div className="relative">
                       <NavigationMenuTrigger className="!bg-transparent">{menu.title}</NavigationMenuTrigger>
-                      <NavigationMenuContent className="p-6 left-0">
+                      <NavigationMenuContent className="p-4 left-0">
                         {menu.content}
                       </NavigationMenuContent>
                     </div>
@@ -69,6 +102,9 @@ const Header = () => {
         <div className="flex items-center gap-6">
           <Button variant="ghost" className="!bg-transparent text-[#687076] hover:text-black">Sign in</Button>
           <Link href="https://dashboard.zaviago.com" className="purple-button">Register</Link>
+          <Button onClick={handleSwitchTheme}>
+            {theme === "light" ? <Sun /> : <Moon />}
+          </Button>
         </div>
       </div>
     </header>
