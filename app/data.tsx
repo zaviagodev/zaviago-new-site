@@ -100,3 +100,8 @@ export const inStoreSystems = [
     { img:storehub, alt:"Storehub", className:"h-[14px] w-auto" },
     { img:foodstory, alt:"Foodstory", className:"h-6 w-auto" },
 ]
+
+export const companies_icons: StaticImageData[] = [
+    zort, fillgoods, shipnity, page365, makewebeasy, buzzebees, chococrm, pointspot, connectx, jubili, venio, clickup, monday,
+    notion, trello, ohochat, bizchat, zwizai, zaapi, powerbi, tableau, storehub, foodstory
+]

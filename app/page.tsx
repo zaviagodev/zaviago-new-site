@@ -11,7 +11,7 @@ export default function Home() {
     <section className="flex flex-col gap-10 pt-20">
       <section className="flex flex-col gap-10 text-center px-10">
         {/* TODO: paste image of swappers */}
-        <h1 className="text-shadegray-400 text-[42px] md:text-[78px] font-semibold leading-[1.2em] tracking-[-0.8px]">
+        <h1 className="main-header">
           จัดการงานและธุรกิจ<br/>
           <span className="text-mainpurple">ทั้งหมด</span>
           ของคุณ
@@ -57,9 +57,9 @@ export default function Home() {
         </ViewMoreSheet>
       </section>
 
-      <section className="flex flex-col py-[175px] bg-[#fafafa] text-center px-10 gap-10">
+      <section className="flex flex-col py-[175px] bg-shadegray-500 text-center px-10 gap-10">
         <div className="max-w-[900px] mx-auto w-full">
-          <h1 className="font-semibold text-3xl md:text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300"><span className="text-mainpurple">ระบบเว็บไซต์</span> ขายสินค้า<br/> และสร้าง <span className="text-mainpurple">ร้านค้าออนไลน์</span><br/>ใหม่ของคุณ</h1>
+          <h1 className="font-semibold sub-header"><span className="text-mainpurple">ระบบเว็บไซต์</span> ขายสินค้า<br/> และสร้าง <span className="text-mainpurple">ร้านค้าออนไลน์</span><br/>ใหม่ของคุณ</h1>
         </div>
 
         <div className="flex flex-col gap-2 w-full items-center">
@@ -83,7 +83,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col gap-10 max-w-[900px] mx-auto w-full px-10 py-[198px]">
-        <h1 className="font-semibold text-3xl md:text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300 text-center">สร้างเว็บไซต์สุดปังและฟรี<br/> คุณเองก็ทำได้</h1>
+        <h1 className="font-semibold sub-header text-center">สร้างเว็บไซต์สุดปังและฟรี<br/> คุณเองก็ทำได้</h1>
 
         <div className="flex flex-col gap-5 w-full items-center">
           <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
@@ -103,7 +103,7 @@ export default function Home() {
           <h2 className="p-12">รองรับทั้งคอมพิวเตอร์ และแท็บเล็ต ไม่ต้องลงโปรแกรม เปิดผ่านเบราว์เซอร์ ใช้งานสะดวกไม่ว่าจะทำที่ไหนก็ตามใจคุณ</h2>
         </div>
 
-        <h1 className="font-semibold text-3xl md:text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300">ทำเว็บไซต์ที่ทรงพลัง ใช้งานง่ายเพียงปลายนิ้วสัมผัส</h1>
+        <h1 className="font-semibold sub-header">ทำเว็บไซต์ที่ทรงพลัง ใช้งานง่ายเพียงปลายนิ้วสัมผัส</h1>
         <HeroVideoDialog videoSrc="https://youtu.be/BpUxrR34t58"/>
 
         <h2 className="font-medium text-2xl text-left text-shadegray-200 p-12">สัมผัสประสบการณ์ความเป็นไปได้แบบไร้ขอบเขตด้วยเทมเพลตมืออาชีพให้การนำเสนอเว็บไซต์ของคุณเป็นไปได้อย่าง่ายดาย</h2>
@@ -114,7 +114,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col gap-10 max-w-[900px] mx-auto w-full px-10 py-20">
-        <h1 className="font-semibold text-3xl md:text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300">เก็บข้อมูลสมาชิก <span className="text-mainpurple">ระบบสะสมแต้ม</span> และแลก <span className="text-mainpurple">ของรางวัล</span> ผ่าน Line OA</h1>
+        <h1 className="font-semibold sub-header">เก็บข้อมูลสมาชิก <span className="text-mainpurple">ระบบสะสมแต้ม</span> และแลก <span className="text-mainpurple">ของรางวัล</span> ผ่าน Line OA</h1>
       
         <div className="flex flex-col gap-5 w-full">
           <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
@@ -145,14 +145,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center py-[175px] bg-[#fafafa] px-10 gap-10">
+      <section className="flex flex-col items-center py-[175px] bg-shadegray-500 px-10 gap-10">
         <div className="max-w-[900px] mx-auto w-full flex flex-col items-center">
-          <h1 className="font-semibold text-3xl md:text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300">มีระบบ <span className="text-mainpurple">รวมแชทในที่เดียว</span><br/> ดูแลลูกค้าพร้อมกันได้หลายแพลตฟอร์ม</h1>
+          <h1 className="font-semibold sub-header">มีระบบ <span className="text-mainpurple">รวมแชทในที่เดียว</span><br/> ดูแลลูกค้าพร้อมกันได้หลายแพลตฟอร์ม</h1>
         
-          <h1 className="max-w-[490px] font-semibold text-3xl md:text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300">เพิ่มประสิทธิภาพทีม<br/>แอดมินในการดูแล</h1>
+          <h1 className="max-w-[490px] font-semibold sub-header">เพิ่มประสิทธิภาพทีม<br/>แอดมินในการดูแล</h1>
 
           <div className="max-w-[490px] flex flex-col gap-5 pt-20">
-            <h1 className="font-semibold text-3xl md:text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300">ตอบโจทย์การดูแล<br/>แชทครบวงจร</h1>
+            <h1 className="font-semibold sub-header">ตอบโจทย์การดูแล<br/>แชทครบวงจร</h1>
             <h2 className="font-medium text-2xl text-left text-shadegray-200">รองรับการแชทหลากหลายช่องทาง ทั้ง <span className="text-mainpurple">FB Messenger, Instagram, LINE Official, Telegram</span> และอื่นๆ ตอบสะดวก บริหารจัดการได้สบายในแอปเดียว</h2>
           </div>
         </div>

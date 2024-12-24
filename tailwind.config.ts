@@ -22,6 +22,8 @@ export default {
   			purple: 'rgba(87, 20, 255, 0.4) 0px 0px 12px 1px'
   		},
   		colors: {
+			black: 'var(--black)',
+			white: 'var(--white)',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -73,12 +75,18 @@ export default {
   				ring: 'hsl(var(--sidebar-ring))'
   			},
   			shadegray: {
-  				'100': '#0303037D',
-  				'200': '#8D8E91',
-  				'300': '#31373D',
-				'400': '#1D1E20',
-  				DEFAULT: '#0303037D'
+  				'100': 'var(--shadegray-1)',
+  				'200': 'var(--shadegray-2)',
+  				'300': 'var(--shadegray-3)',
+				'400': 'var(--shadegray-4)',
+				'500': 'var(--shadegray-5)',
+  				DEFAULT: 'var(--shadegray-1)'
   			},
+			shadewhite: {
+				'100': 'var(--shadewhite-1)',
+				'200': 'var(--shadewhite-2)',
+				DEFAULT: 'var(--shadewhite-1)'
+			},
   			mainpurple: '#3d08ff'
   		},
   		borderRadius: {

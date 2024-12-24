@@ -4,6 +4,8 @@
 
 @layer base {
   :root {
+    --black: #000000;
+    --white: #FFFFFF;
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
@@ -37,8 +39,17 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    --shadegray-1: #0303037D;
+    --shadegray-2: #8D8E91;
+    --shadegray-3: #31373D;
+    --shadegray-4: #1D1E20;
+    --shadegray-5: #fafafa;
+    --shadewhite-1: #FCFBFE;
+    --shadewhite-2: #F5F5F7
   }
   .dark {
+    --black: #FFFFFF;
+    --white: #000000;
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
@@ -71,6 +82,13 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    --shadegray-1: #fcfcfc7d;
+    --shadegray-2: #72716e;
+    --shadegray-3: #cec8c2;
+    --shadegray-4: #e2e1df;
+    --shadegray-5: #050505;
+    --shadewhite-1: #030401;
+    --shadewhite-2: #0a0a08
   }
 }
 
@@ -106,4 +124,12 @@
 
 .purple-button {
   @apply w-fit mx-auto main-gradient text-white px-6 py-2 rounded-xl text-sm font-medium shadow-purple hover:scale-[1.1] transition duration-200
+}
+
+.sub-header {
+  @apply text-3xl md:text-[56px] leading-[1.2em] tracking-[-0.8px] text-shadegray-300
+}
+
+.main-header {
+  @apply text-shadegray-400 text-[42px] md:text-[78px] font-semibold leading-[1.2em] tracking-[-0.8px]
 }
