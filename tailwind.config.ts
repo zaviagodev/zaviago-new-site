@@ -22,8 +22,6 @@ export default {
   			purple: 'rgba(87, 20, 255, 0.4) 0px 0px 12px 1px'
   		},
   		colors: {
-			black: 'var(--black)',
-			white: 'var(--white)',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
