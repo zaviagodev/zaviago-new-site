@@ -12,7 +12,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { Box, PlusCircle, ShoppingBag } from "lucide-react"
+import { Box, CheckCircle, Crown, Dot, Gift, HandCoins, List, PlusCircle, Settings, ShoppingBag, SquarePen, Tag, Ticket, Trophy, Warehouse } from "lucide-react"
 import { ReactNode } from "react"
 
 interface FeatureCardProps {
@@ -24,43 +24,120 @@ interface FeatureCardListsProps extends FeatureCardProps {
   sublist?: FeatureCardProps[]
 }
 
-const feature_card_list: FeatureCardListsProps[] = [
-  {
-    title:"สินค้า",
-    icon: <ShoppingBag />,
-    sublist: [
-      {
-        title:"สินค้าของคุณ",
-        icon:<Box />
-      },
-      {
-        title:"เพิ่มสินค้าใหม่",
-        icon:<PlusCircle />
-      }
-    ]
-  },
-  {
-    title:"การค้าขาย",
-    icon: <ShoppingBag />,
-    sublist: [
-      {
-        title:"สินค้าของคุณ",
-        icon:<Box />
-      },
-      {
-        title:"เพิ่มสินค้าใหม่",
-        icon:<PlusCircle />
-      }
-    ]
-  }
-]
-
 const FeatureCards = () => {
+  const iconClassName = "h-4 w-4"
+  const feature_card_list: FeatureCardListsProps[] = [
+    {
+      title:"สินค้า",
+      icon: <ShoppingBag className={iconClassName}/>,
+      sublist: [
+        {
+          title:"สินค้าของคุณ",
+          icon:<Box className={iconClassName}/>
+        },
+        {
+          title:"เพิ่มสินค้าใหม่",
+          icon:<PlusCircle className={iconClassName}/>
+        },
+        {
+          title:"สินค้าในช่องทางต่างๆ",
+          icon:<PlusCircle className={iconClassName}/>
+        },
+        {
+          title:"หมวดหมู่สินค้า",
+          icon:<PlusCircle className={iconClassName}/>
+        },
+        {
+          title:"หมวดหมู่ยี่ห้อ",
+          icon:<PlusCircle className={iconClassName}/>
+        },
+        {
+          title:"คลังสินค้า",
+          icon:<Warehouse className={iconClassName}/>
+        },
+        {
+          title:"คุณลักษณะของสินค้า",
+          icon:<Tag className={iconClassName}/>
+        }
+      ]
+    },
+    {
+      title:"การค้าขาย",
+      icon: <ShoppingBag className={iconClassName}/>,
+      sublist: [
+        {
+          title:"คำสั่งซื้อ",
+          icon:<SquarePen className={iconClassName}/>
+        },
+        {
+          title:"การแจ้งโอนเงิน",
+          icon:<CheckCircle className={iconClassName}/>
+        },
+        {
+          title:"ช่องทางการขาย",
+          icon:<List className={iconClassName}/>
+        }
+      ]
+    },
+    {
+      title:"การตลาด",
+      icon: <ShoppingBag className={iconClassName}/>,
+      sublist: [
+        {
+          title:"โค้ดส่วนลด",
+          icon:<Ticket className={iconClassName}/>,
+        },
+        {
+          title:"โปรโมชันส่วนลด",
+          icon:<Dot className={iconClassName}/>
+        },
+        {
+          title:"Bundle Deal",
+          icon:<Dot className={iconClassName}/>
+        },
+        {
+          title:"Add-on Deal",
+          icon:<Dot className={iconClassName}/>
+        },       
+        {
+          title:"Flash Sales",
+          icon:<Dot className={iconClassName}/>
+        }
+      ]
+    },
+    {
+      title:"ระบบแต้มและรางวัล",
+      icon: <Crown className={iconClassName}/>,
+      sublist: [
+        {
+          title:"Loyalty Program",
+          icon:<Crown className={iconClassName}/>,
+        },
+        {
+          title:"แลกซื้อผ่านแต้ม",
+          icon:<HandCoins className={iconClassName}/>
+        },
+        {
+          title:"ระดับลูกค้า",
+          icon:<Trophy className={iconClassName}/>
+        },
+        {
+          title:"ของรางวัล",
+          icon:<Gift className={iconClassName}/>
+        },
+        {
+          title:"ตั้งค่า Point",
+          icon:<Settings className={iconClassName}/>
+        }
+      ]
+    },
+  ]
+
   return (
     <>
       {feature_card_list.map(list => (
         <Card key={list.title} className="!p-6 w-full">
-          <Accordion type="single" className="w-full">
+          <Accordion type="single" className="w-full" defaultValue={list.title}>
             <AccordionItem value={list.title} className="border-0">
                 <AccordionTrigger className="p-0">
                   <div className="flex items-center gap-2">
