@@ -11,7 +11,7 @@ const MarketplacesPage = () => {
         <p className="font-semibold">SHOPEE - LAZADA - LINE - TIKTOK - WEBSITE - HEART</p>
       </section>
 
-      <section className="flex flex-col items-center gap-10 max-w-[900px] mx-auto w-full">
+      <section className="flex flex-col items-center gap-10 small-container">
         <h1 className="text-[42px] md:text-[78px] font-semibold leading-[1.2em] tracking-[-0.8px]">
           Make it yours
         </h1>
@@ -27,7 +27,7 @@ const MarketplacesPage = () => {
         <p className="text-center">IMAGE ABOUT PRODUCT STOCK</p>
       </section>
 
-      <section className="max-w-[900px] mx-auto w-full">
+      <section className="small-container">
         <div className="font-medium text-2xl text-shadegray-200 grid md:grid-cols-2 gap-4">
           <h2 className="p-12">ไม่ว่าคุณจะมีกี่ช่องทางการขายก็สามารถจัดการออเดอร์ได้อย่างเป็นระบบ โดยคุณ<span className="text-shadegray-400">สามารถรวมออเดอร์จากทุกช่องทางการขาย</span>มาไว้ในที่เดียว</h2>
           <h2 className="p-12">จัดการสต๊อก อัพเดทอัตโนมัติ ช่วยให้คุณอัปเดตสต๊อกสินค้าได้แบบเรียลไทม์ <span className="text-shadegray-400">สรุปรายงานข้อมูลสำคัญที่เข้าใจง่าย</span>และช่วยสร้างการเติบโตให้กับธุรกิจของคุณ</h2>
@@ -38,7 +38,7 @@ const MarketplacesPage = () => {
         </ViewMoreSheet>
       </section>
 
-      <section className="max-w-[900px] mx-auto w-full">
+      <section className="small-container">
         <h1 className="text-[42px] md:text-[56px] font-semibold leading-[1.2em] tracking-[-0.8px] text-center">
           คำสั่งซื้อมารวมกันในที่เดียว
         </h1>
@@ -67,8 +67,8 @@ const MarketplacesPage = () => {
         <h2 className="text-center font-medium text-xl text-shadegray-200">แยกหรือรวมการจัดการสต๊อกต่างๆในแต่ละช่องทางการขายได้ด้วยระบบ WMS <br/>ช่วยให้คุณจัดการสต๊อกได้อย่างเป็นระบบ</h2>
       </section>
 
-      <section className="max-w-[900px] mx-auto w-full grid md:grid-cols-2">
-        <div className="flex flex-col items-center gap-10 max-w-[900px] mx-auto w-full">
+      <section className="small-container grid md:grid-cols-2">
+        <div className="flex flex-col items-center gap-10 small-container">
           <h1 className="text-[42px] md:text-[56px] font-semibold leading-[1.2em] tracking-[-0.8px]">
             ง่ายกว่า wix, ใช้งานเหมือน Canva ก็เรานี่แหละ
           </h1>

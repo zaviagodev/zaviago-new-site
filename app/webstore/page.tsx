@@ -20,7 +20,7 @@ const WebstorePage = () => {
         <p className="text-center">IMAGE OF ITEM CARDS</p>
       </section>
 
-      <section className="flex flex-col gap-10 py-20 max-w-[900px] w-full mx-auto">
+      <section className="flex flex-col gap-10 py-20 small-container">
         <h2 className="text-4xl font-semibold">พร้อมฟีเจอร์เว็บแอปทันสมัย ที่คุณเองก็สร้างได้</h2>
         <p className="font-medium text-xl text-left text-shadegray-200">เหนือกว่าคู่แข่งของคุณด้วย เว็บไซต์ / ซูเปอร์แอป ของคุณเอง โดยใช้เครื่องมือต่างๆที่มีในระบบ <span className="text-shadegray-400">เช่น สะสมแต้ม, ตะกร้าสินค้า, หัวใจสินค้า, สะสมคูปองแลกของรางวัล,</span> เก็บฐานข้อมูล และใช้งานง่าย ผ่านบัตรสมาชิกในแอ๊บ</p>
       </section>
@@ -39,7 +39,7 @@ const WebstorePage = () => {
         <p>IMAGE OF DASHBOARD</p>
       </section>
 
-      <div className="max-w-[900px] mx-auto w-full font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20">
+      <div className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20">
         <h2 className="p-12">รวมทุกฟีเจอร์ การจัดการธุรกิจ ออนไลน์และออฟไลน์ <span className="text-mainpurple">จัดการคำสั่งซื้ออย่างเป็นระบบ</span> สุดปังกับฟีเจอร์ที่ครอบคลุมทุกรูปแบบ</h2>
         <h2 className="p-12">ไม่ว่าคุณจะมีกี่ช่องทางการขายก็<span className="text-mainpurple">จัดการได้ ช่วยลดเวลาในการทำงาน และเพิ่มโอกาส</span>ในการสร้างกำไร</h2>
       </div>
@@ -49,13 +49,19 @@ const WebstorePage = () => {
       </section>
 
       <section className="bg-[#1D1D1F] py-20">
-        <div className="main-container">
+        <div className="flex flex-col gap-10 main-container">
           <h1 className="sub-header font-semibold !text-white">มากมายหลากหลายฟีเจอร์ และยังจะมีเพิ่มมาอีกเรื่อยๆ</h1>
-          <p>เปิดระบบเก็บสะสมคูปองเหมือน Shopee และ Lazada รองรับการชำระเงินจากหลายช่องทางเช่น 
-PromptPay , TrueMoney, Creditฉard เพิ่มระบบ Order Tracking และ หน้าแบนเนอร์รวมโปรโมชั่นและ
-ของขวัญต่าง ๆ ได้อีกด้วย</p>
+          <p className="font-medium text-xl text-left text-shadegray-200">เปิดระบบเก็บสะสมคูปองเหมือน Shopee และ Lazada รองรับการชำระเงินจากหลายช่องทางเช่น 
+          PromptPay , TrueMoney, Creditฉard เพิ่มระบบ Order Tracking และ หน้าแบนเนอร์รวมโปรโมชั่นและ
+          ของขวัญต่าง ๆ ได้อีกด้วย</p>
+          <p className="text-center">IMAGES OF COUPON CODE</p>
         </div>
       </section>
+
+      <div className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20">
+        <h2 className="p-12">หน้าสั่งซื้อสินค้าที่ สวยงาม ทันสมัย ใช้งานง่าย ยืดหยุ่นกว่าเดิม เพิ่มยอดด้วยความเร็วที่สูง ลดการโหลดข้อมูลช้า</h2>
+        <h2 className="p-12">ทุกออเดอร์จะถูกสร้างเป็นบิลออนไลน์ ลูกค้าสามารถดูรายละเอียด จ่ายเงิน ติดตามสถานะสินค้าได้อย่างสะดวกสบาย</h2>
+      </div>
     </section>
   )
 }

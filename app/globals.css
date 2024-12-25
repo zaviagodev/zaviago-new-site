@@ -114,6 +114,10 @@
   @apply max-w-[1300px] mx-auto w-full px-10
 }
 
+.small-container {
+  @apply max-w-[900px] mx-auto w-full px-10
+}
+
 .header {
   @apply flex items-center py-[5px] h-[70px] bg-[#FFFFFF52] fixed top-0 left-0 opacity-100 w-full z-[40]
 }

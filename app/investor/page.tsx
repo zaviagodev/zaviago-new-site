@@ -79,7 +79,7 @@ const InvestorPage = () => {
         ))}
       </section>
 
-      <section className="py-20 max-w-[900px] mx-auto w-full">
+      <section className="py-20 small-container">
         <h1 className="text-shadegray-400 text-[42px] md:text-[56px] font-semibold leading-[1.2em] tracking-[-0.8px]">We started online and built a commerce platform
         that helps merchants sell everywhere their customers are</h1>
 
@@ -90,13 +90,13 @@ const InvestorPage = () => {
         <h1 className="text-white text-center text-4xl font-semibold">We solve the biggest challenges in the commerce</h1>
       </section>
 
-      <section className="py-20 max-w-[900px] mx-auto w-full">
+      <section className="py-20 small-container">
         <h1 className="text-shadegray-400 text-[42px] md:text-[56px] font-semibold leading-[1.2em] tracking-[-0.8px]"><span className="text-mainpurple">We continue to expand zaviago's breadth</span> to make it even easier for merchants to start and scale their business</h1>
       
         <p className="text-center">IMAGE OF DASHBOARD</p>
       </section>
 
-      <section className="max-w-[900px] mx-auto w-full flex flex-col gap-10">
+      <section className="small-container flex flex-col gap-10">
         <h2 className="text-4xl font-semibold"><span className="text-mainpurple">Launching 100+</span> features and updates every six months</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
           <FeatureCards />
@@ -105,11 +105,11 @@ const InvestorPage = () => {
         <p className="font-medium text-2xl text-left text-shadegray-200">So that businesses never need to leave Zaviago platform, from first sales to full scale</p>
       </section>
 
-      <section className="max-w-[900px] mx-auto w-full flex flex-col gap-10">
+      <section className="small-container flex flex-col gap-10">
         <h2 className="text-4xl font-semibold">Making commerce better for everyone in everything we do.</h2>
       </section>
 
-      <section className="max-w-[900px] mx-auto w-full flex flex-col gap-10">
+      <section className="small-container flex flex-col gap-10">
         <h1 className="text-4xl font-semibold">We are creating and expanding our total addressable market through…</h1>
       </section>
     </section>

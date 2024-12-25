@@ -60,8 +60,8 @@ const Header = () => {
           <Link href="/investor">
             <Button variant="ghost" className="w-full justify-start">Investors</Button>
           </Link>
-          <Link href="/marketplaces">
-            <Button variant="ghost" className="w-full justify-start">Marketplaces</Button>
+          <Link href="/jobs">
+            <Button variant="ghost" className="w-full justify-start">Work with us</Button>
           </Link>
         </div>
       )

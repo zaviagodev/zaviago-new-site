@@ -26,7 +26,7 @@ export default function Home() {
         </aside>
       </section>
 
-      <section className="max-w-[900px] mx-auto w-full flex flex-col gap-20 px-10">
+      <section className="small-container flex flex-col gap-20">
         <div className="flex gap-12 items-center w-full">
           <p className="text-xs text-shadegray-200 font-medium">Trusted by industry leaders and innovators</p>
           <ul className="flex justify-between items-center w-full">
@@ -43,7 +43,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="max-w-[900px] mx-auto w-full flex flex-col gap-10 p-10">
+      <section className="small-container flex flex-col gap-10 p-10">
         <Bento />
         <div className="font-medium text-2xl text-shadegray-200 grid md:grid-cols-2 gap-4">
           <h2 className="p-12">รวมทุกฟีเจอร์ การจัดการธุรกิจ ออนไลน์และออฟไลน์ <span className="text-mainpurple">จัดการคำสั่งซื้ออย่างเป็นระบบ</span> สุดปังกับฟีเจอร์ที่ครอบคลุมทุกรูปแบบ</h2>
@@ -58,7 +58,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col py-[175px] bg-shadegray-500 text-center px-10 gap-10">
-        <div className="max-w-[900px] mx-auto w-full">
+        <div className="small-container">
           <h1 className="font-semibold sub-header"><span className="text-mainpurple">ระบบเว็บไซต์</span> ขายสินค้า<br/> และสร้าง <span className="text-mainpurple">ร้านค้าออนไลน์</span><br/>ใหม่ของคุณ</h1>
         </div>
 
@@ -72,7 +72,7 @@ export default function Home() {
         {/* TODO: paste image or template of Storefront */}
         <h1>STOREFRONT IMAGE OR TEMPLATE WILL BE PASTED SOON!</h1>
 
-        <div className="max-w-[900px] mx-auto w-full font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20">
+        <div className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20">
           <h2 className="p-12">ให้คุณมั่นใจได้ตั้งแต่เริ่มสร้างเว็บจนถึงยอดขายร้อยล้าน <span className="text-mainpurple">ด้วยเครื่องมือสร้างเว็บไซต์ที่ทรงพลัง</span> สุดปังกับฟีเจอร์และการทำการตลาด</h2>
           <h2 className="p-12">ลูกค้าของคุณเข้าถึงเว็บไซต์ได้มากขึ้น <span className="text-mainpurple">รองรับทุกรูปแบบไม่ว่าจะเป็น คอมพิวเตอร์ หรือ บนมือถือ</span> เพื่อมุ่งสู่ยอดขายที่คุณต้องการ</h2>
         </div>
@@ -82,7 +82,7 @@ export default function Home() {
         </ViewMoreSheet>
       </section>
 
-      <section className="flex flex-col gap-10 max-w-[900px] mx-auto w-full px-10 py-[198px]">
+      <section className="flex flex-col gap-10 small-container py-[198px]">
         <h1 className="font-semibold sub-header text-center">สร้างเว็บไซต์สุดปังและฟรี<br/> คุณเองก็ทำได้</h1>
 
         <div className="flex flex-col gap-5 w-full items-center">
@@ -113,7 +113,7 @@ export default function Home() {
         </ViewMoreSheet>
       </section>
 
-      <section className="flex flex-col gap-10 max-w-[900px] mx-auto w-full px-10 py-20">
+      <section className="flex flex-col gap-10 small-container py-20">
         <h1 className="font-semibold sub-header">เก็บข้อมูลสมาชิก <span className="text-mainpurple">ระบบสะสมแต้ม</span> และแลก <span className="text-mainpurple">ของรางวัล</span> ผ่าน Line OA</h1>
       
         <div className="flex flex-col gap-5 w-full">
@@ -135,7 +135,7 @@ export default function Home() {
         </ViewMoreSheet>
       </section>
 
-      <section className="max-w-[900px] mx-auto w-full px-10">
+      <section className="small-container">
         <div className="flex flex-col gap-[200px] text-3xl font-semibold">
           <h1>เปิดระบบผ่านไลน์ของธุรกิจคุณได้ โดยไม่ต้องมีแอปเพิ่ม</h1> {/* LINE Features */}
           <h1>สมัครง่ายด้วยระบบที่เชื่อมต่อไลน์ไอดีและเบอร์ลูกค้า</h1> {/* Register with LINE via phone number and/or Line ID */}
@@ -146,7 +146,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col items-center py-[175px] bg-shadegray-500 px-10 gap-10">
-        <div className="max-w-[900px] mx-auto w-full flex flex-col items-center">
+        <div className="small-container flex flex-col items-center">
           <h1 className="font-semibold sub-header">มีระบบ <span className="text-mainpurple">รวมแชทในที่เดียว</span><br/> ดูแลลูกค้าพร้อมกันได้หลายแพลตฟอร์ม</h1>
         
           <h1 className="max-w-[490px] font-semibold sub-header">เพิ่มประสิทธิภาพทีม<br/>แอดมินในการดูแล</h1>
