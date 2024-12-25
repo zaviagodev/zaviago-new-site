@@ -35,7 +35,7 @@ const Products = () => {
 
         <div className="flex flex-col gap-5 w-full items-center">
           <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
-          <ul className="flex items-center gap-8 w-full justify-center">
+          <ul className="flex items-center gap-8 w-full justify-center flex-wrap">
             <ImgList list={lineOASystems}/>
           </ul>
         </div>
@@ -52,7 +52,7 @@ const Products = () => {
 
         <div className="flex flex-col gap-5 w-full items-center">
           <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
-          <ul className="flex items-center gap-8 w-full justify-center">
+          <ul className="flex items-center gap-8 w-full justify-center flex-wrap">
             <ImgList list={storefrontSystems}/>
           </ul>
         </div>
@@ -68,7 +68,7 @@ const Products = () => {
 
         <div className="flex flex-col gap-5 w-full items-center">
           <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
-          <ul className="flex items-center gap-8 w-full justify-center">
+          <ul className="flex items-center gap-8 w-full justify-center flex-wrap">
             <ImgList list={teamChatSystems}/>
           </ul>
         </div>

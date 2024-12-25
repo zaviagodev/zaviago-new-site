@@ -37,7 +37,7 @@ export default function Home() {
         <h1 className="text-3xl md:text-[56px] font-semibold leading-[1.2em] tracking-[-0.8px] text-shadegray-300">ระบบ <span className="text-mainpurple">จัดการธุรกิจ</span> ออเดอร์,<br/> สต็อก, ลูกค้า , เชื่อมต่อได้ทุก<br/>แพลตฟอร์ม</h1>
         <div className="flex flex-col gap-5 w-full">
           <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
-          <ul className="flex items-center gap-8 w-full">
+          <ul className="flex items-center gap-8 w-full flex-wrap">
             <ImgList list={orderManagementSystems}/>
           </ul>
         </div>
@@ -64,7 +64,7 @@ export default function Home() {
 
         <div className="flex flex-col gap-2 w-full items-center">
           <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
-          <ul className="flex items-center justify-center gap-8 w-full">
+          <ul className="flex items-center justify-center gap-8 w-full flex-wrap">
             <ImgList list={storefrontSystems}/>
           </ul>
         </div>
@@ -87,7 +87,7 @@ export default function Home() {
 
         <div className="flex flex-col gap-5 w-full items-center">
           <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
-          <ul className="flex items-center justify-center gap-8 w-full">
+          <ul className="flex items-center justify-center gap-8 w-full flex-wrap">
             <ImgList list={siteBuilderSystems}/>
           </ul>
         </div>
@@ -118,7 +118,7 @@ export default function Home() {
       
         <div className="flex flex-col gap-5 w-full">
           <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
-          <ul className="flex items-center gap-8 w-full">
+          <ul className="flex items-center gap-8 w-full flex-wrap">
             <ImgList list={lineOASystems} />
           </ul>
         </div>
@@ -172,7 +172,7 @@ export default function Home() {
 
         <div className="flex flex-col gap-5 w-full items-center">
           <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
-          <ul className="flex items-center gap-8 w-full justify-center">
+          <ul className="flex items-center gap-8 w-full justify-center flex-wrap">
             <ImgList list={workdaySystems}/>
           </ul>
         </div>
@@ -184,7 +184,7 @@ export default function Home() {
 
         <div className="flex flex-col gap-5 w-full items-center">
           <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
-          <ul className="flex items-center gap-8 w-full justify-center">
+          <ul className="flex items-center gap-8 w-full justify-center flex-wrap">
             <ImgList list={dataInsightSystems}/>
           </ul>
         </div>
@@ -196,7 +196,7 @@ export default function Home() {
 
         <div className="flex flex-col gap-5 w-full items-center">
           <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
-          <ul className="flex items-center gap-8 w-full justify-center">
+          <ul className="flex items-center gap-8 w-full justify-center flex-wrap">
             <ImgList list={salesHubSystems}/>
           </ul>
         </div>
@@ -209,7 +209,7 @@ export default function Home() {
 
           <div className="flex flex-col gap-5 w-full items-center">
             <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
-            <ul className="flex items-center gap-8 w-full justify-center">
+            <ul className="flex items-center gap-8 w-full justify-center flex-wrap">
               <ImgList list={inStoreSystems}/>
             </ul>
           </div>

@@ -1,11 +1,5 @@
 import { cn } from "@/lib/utils"
 import { DataCompProps, investment_thesis_data, investor_data, transaction_data } from "./data"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
 import InvestmentThesis from "./(components)/InvestmentThesis"
 import { companies_icons } from "../data"
 import Image from "next/image"
