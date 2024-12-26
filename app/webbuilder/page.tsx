@@ -132,6 +132,7 @@ const Webbuilder = () => {
           <ImgPlaceholder height="600px">
             <p className="text-center">ONE VIDEO Placeholder</p>
           </ImgPlaceholder>
+          <p className="text-xl font-semibold text-shadegray-200 text-center">ระบบและการสร้างเว็บที่สร้างมาเพื่อการรองรับ การวาด<br/>การลากและการเลื่อนผ่าน Apple Pencil<br/> นอกจากนี้ระบบยังรองรับ Multitouch สำหรับฟังก์ชั่นในการทำงานอีกด้วย</p>
         </div>
       </section>
 
@@ -145,6 +146,21 @@ const Webbuilder = () => {
         <ImgPlaceholder height="600px">
           <p className="text-center">Procreate Placeholder</p>
         </ImgPlaceholder>
+
+        <div className="flex gap-5 main-container">
+          <ImgPlaceholder height="600px">
+            <p className="text-center">ONE VIDEO Placeholder</p>
+          </ImgPlaceholder>
+          <ImgPlaceholder height="600px">
+            <p className="text-center">ONE VIDEO Placeholder</p>
+          </ImgPlaceholder>
+        </div>
+
+        <div className="font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 main-container">
+          <h2 className="p-12">อัพโหลดรูปภาพได้แบบง่าย ๆ  จัดโครงสร้างบนเว็บไซต์อัตโนมัติ แค่ลาก - วางเหมือนกับสิ่งที่คุณคุ้นเคย</h2>
+          <h2 className="p-12">สร้างแบรนด์ โดยการปรับแต่งรูปแบบ ปุ่ม ตัวอักษร สี ได้ในทีเดียว ให้ตรงกับตัวตนของคุณ
+          ได้อย่างเต็มที</h2>
+        </div>
       </section>
     </section>
   )
