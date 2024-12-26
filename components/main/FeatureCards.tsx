@@ -12,7 +12,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { Box, CheckCircle, Crown, Dot, Gift, HandCoins, List, PlusCircle, Settings, ShoppingBag, SquarePen, Tag, Ticket, Trophy, Warehouse } from "lucide-react"
+import { Box, CheckCircle, CircleUserRound, Clipboard, Crown, Dot, Gift, HandCoins, List, PlusCircle, ReceiptText, Settings, ShoppingBag, SquarePen, Tag, Ticket, Trophy, Truck, Warehouse } from "lucide-react"
 import { ReactNode } from "react"
 
 interface FeatureCardProps {
@@ -75,7 +75,19 @@ const FeatureCards = () => {
         },
         {
           title:"ช่องทางการขาย",
-          icon:<List className={iconClassName}/>
+          icon:<Clipboard className={iconClassName}/>
+        },
+        {
+          title:"การจัดส่ง",
+          icon:<Truck className={iconClassName}/>
+        },
+        {
+          title:"คืนสินค้า",
+          icon:<ReceiptText className={iconClassName}/>  
+        },
+        {
+          title:"ลูกค้า",
+          icon:<CircleUserRound className={iconClassName}/>  
         }
       ]
     },
