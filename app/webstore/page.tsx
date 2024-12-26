@@ -1,3 +1,4 @@
+import ImgPlaceholder from "@/components/ImgPlaceholder"
 import { Button } from "@/components/ui/button"
 
 const WebstorePage = () => {
@@ -9,7 +10,9 @@ const WebstorePage = () => {
           <h1 className="text-[180px] leading-[150px]">ใหม่ของคุณ</h1>
         </div>
 
-        <p className="text-center">IMAGE OF THE STORE PAGE</p>
+        <ImgPlaceholder height="600px">
+          <p className="text-center">IMAGE OF THE STORE PAGE</p>
+        </ImgPlaceholder>
 
         <Button>เปิดเว็บฟรี</Button>
       </section>
@@ -17,7 +20,9 @@ const WebstorePage = () => {
       <section className="flex flex-col gap-10 items-center py-20">
         <p className="text-shadegray font-semibold text-center">สร้างร้านค้าออนไลน์ให้แบรนด์คุณเอง<br/>ต่อระบบสะสมแต้มและฟีเจอร์อื่นๆอีกมากมาย</p>
 
-        <p className="text-center">IMAGE OF ITEM CARDS</p>
+        <ImgPlaceholder height="600px">
+          <p className="text-center">IMAGE OF ITEM CARDS</p>
+        </ImgPlaceholder>
       </section>
 
       <section className="flex flex-col gap-10 py-20 small-container">
@@ -33,10 +38,14 @@ const WebstorePage = () => {
         <div className="bg-shadewhite-200 rounded-xl p-10 flex flex-col gap-3">
           <h2 className="text-4xl font-semibold">โชว์ และ จัดการสินค้า Catalogs อย่างง่ายดาย</h2>
           <p className="font-medium text-xl text-left text-shadegray-200">เรามีระบบให้คุณพร้อมขายได้ทันที สะดวก ง่าย ครบจบในที่เดียว ตั้งแต่การสั่งซื้อสินค้า การชำระเงิน ไปจนถึงการจัดส่ง จะขายหลายช่องทางก็ไม่มีปัญหา</p>
-          <p>IMAGE OF STORE</p>
+          <ImgPlaceholder height="600px">
+            <p className="text-center">IMAGE OF STORE</p>
+          </ImgPlaceholder>
         </div>
 
-        <p>IMAGE OF DASHBOARD</p>
+        <ImgPlaceholder height="600px">
+          <p className="text-center">IMAGE OF DASHBOARD</p>
+        </ImgPlaceholder>
       </section>
 
       <div className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20">
@@ -54,7 +63,9 @@ const WebstorePage = () => {
           <p className="font-medium text-xl text-left text-shadegray-200">เปิดระบบเก็บสะสมคูปองเหมือน Shopee และ Lazada รองรับการชำระเงินจากหลายช่องทางเช่น 
           PromptPay , TrueMoney, Creditฉard เพิ่มระบบ Order Tracking และ หน้าแบนเนอร์รวมโปรโมชั่นและ
           ของขวัญต่าง ๆ ได้อีกด้วย</p>
-          <p className="text-center">IMAGES OF COUPON CODE</p>
+          <ImgPlaceholder height="600px">
+            <p className="text-center">IMAGES OF COUPON CODE</p>
+          </ImgPlaceholder>
         </div>
       </section>
 

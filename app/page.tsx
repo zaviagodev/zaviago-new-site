@@ -85,7 +85,7 @@ export default function Home() {
         <div className="flex items-center">
           <ImgPlaceholder height="240px" width="360px"></ImgPlaceholder>
           <ImgPlaceholder height="360px" width="360px"></ImgPlaceholder>
-          <ImgPlaceholder height="480px" width="360px">Gray Croissant</ImgPlaceholder>
+          <ImgPlaceholder height="480px" width="360px">Gray Croissant<br/>I mean, product cards</ImgPlaceholder>
           <ImgPlaceholder height="360px" width="360px"></ImgPlaceholder>          
           <ImgPlaceholder height="240px" width="360px"></ImgPlaceholder>
         </div>
