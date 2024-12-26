@@ -1,6 +1,7 @@
 import MainDashboard from "@/components/dashboard/main-dashboard"
 import { textGradient } from "@/lib/utils"
 import { ImgList, lineOASystems, storefrontSystems, teamChatSystems } from "../data"
+import ImgPlaceholder from "@/components/ImgPlaceholder"
 
 const Products = () => {
   return (
@@ -40,7 +41,9 @@ const Products = () => {
           </ul>
         </div>
 
-        <p className="text-center">IMAGE FOR POINTS AND REWARDS</p>
+        <ImgPlaceholder height="600px">
+          <p className="text-center">IMAGE FOR POINTS AND REWARDS</p>
+        </ImgPlaceholder>
       </section>
 
       <section className="p-10 bg-black text-white flex flex-col gap-10">
@@ -57,7 +60,9 @@ const Products = () => {
           </ul>
         </div>
 
-        <p className="text-center">IMAGE FOR STOREFRONT</p>
+        <ImgPlaceholder height="600px">
+          <p className="text-center">IMAGE FOR STOREFRONT</p>
+        </ImgPlaceholder>
       </section>
 
       <section className="p-10 bg-shadewhite-100 flex flex-col gap-10">
@@ -73,7 +78,9 @@ const Products = () => {
           </ul>
         </div>
 
-        <p className="text-center">IMAGE FOR TEAMCHAT</p>
+        <ImgPlaceholder height="600px">
+          <p className="text-center">IMAGE FOR TEAMCHAT</p>
+        </ImgPlaceholder>
       </section>
     </section>
   )

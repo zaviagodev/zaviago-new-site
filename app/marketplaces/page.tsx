@@ -1,5 +1,6 @@
 import ViewMoreSheet from "@/components/main/ViewMoreSheet"
 import { ImgList, orderManagementSystems } from "../data"
+import ImgPlaceholder from "@/components/ImgPlaceholder"
 
 const MarketplacesPage = () => {
   return (
@@ -24,7 +25,9 @@ const MarketplacesPage = () => {
           </ul>
         </div>
 
-        <p className="text-center">IMAGE ABOUT PRODUCT STOCK</p>
+        <ImgPlaceholder height="600px">
+          <p className="text-center">IMAGE ABOUT PRODUCT STOCK</p>
+        </ImgPlaceholder>
       </section>
 
       <section className="small-container">
@@ -34,7 +37,7 @@ const MarketplacesPage = () => {
         </div>
 
         <ViewMoreSheet buttonText="ระบบรวมออเดอร์ คืออะไร" title="Points and Rewards" desc="ระบบจัดการงานธุรกิจทั้งหมดของคุณในที่เดียว">
-            HEY
+          HEY
         </ViewMoreSheet>
       </section>
 
@@ -42,7 +45,9 @@ const MarketplacesPage = () => {
         <h1 className="text-[42px] md:text-[56px] font-semibold leading-[1.2em] tracking-[-0.8px] text-center">
           คำสั่งซื้อมารวมกันในที่เดียว
         </h1>
-        <p className="text-center">IMAGE ABOUT SALES INVOICES OR ORDERS</p>
+        <ImgPlaceholder height="600px">
+          <p className="text-center">IMAGE ABOUT SALES INVOICES OR ORDERS</p>
+        </ImgPlaceholder>
         <div className="font-medium text-2xl text-shadegray-200 grid md:grid-cols-2 gap-4">
           <h2 className="p-12">จัดการออเดอร์ออนไลน์จาก <span className="text-shadegray-400">Lazada Shopee และ TikTok Shop ซึ่งผู้ขายสามารถกด Ready to ship</span> ด้วยระบบจัดการคำสั่งซื้อ ได้เลยในที่เดียว</h2>
           <h2 className="p-12">รับออเดอร์ออนไลน์ และรวมออเดอร์จาก Social Commerce อย่าง Facebook และ <span className="text-shadegray-400">LINE พร้อมเปิดบิลสร้างรายการขายได้เลยทันที</span>แบบไม่ต้องสลับหน้าจอ</h2>
@@ -62,12 +67,14 @@ const MarketplacesPage = () => {
           </div>
         </div>
 
-        <p className="text-center">IMAGE ABOUT LAZADA STORE INVENTORY</p>
+        <ImgPlaceholder height="600px">
+          <p className="text-center">IMAGE ABOUT LAZADA STORE INVENTORY</p>
+        </ImgPlaceholder>
 
         <h2 className="text-center font-medium text-xl text-shadegray-200">แยกหรือรวมการจัดการสต๊อกต่างๆในแต่ละช่องทางการขายได้ด้วยระบบ WMS <br/>ช่วยให้คุณจัดการสต๊อกได้อย่างเป็นระบบ</h2>
       </section>
 
-      <section className="small-container grid md:grid-cols-2">
+      <section className="main-container grid md:grid-cols-2">
         <div className="flex flex-col items-center gap-10 small-container">
           <h1 className="text-[42px] md:text-[56px] font-semibold leading-[1.2em] tracking-[-0.8px]">
             ง่ายกว่า wix, ใช้งานเหมือน Canva ก็เรานี่แหละ
@@ -75,7 +82,9 @@ const MarketplacesPage = () => {
           <p className="font-semibold text-shadegray text-xl">เชื่อมต่อได้หลายร้านในระบบเดียว ช่วยคุณจัดการทุกการทำงานต่างๆของร้านของคุณ</p>
         </div>
 
-        <p className="text-right">IMAGE OF SITES</p>
+        <ImgPlaceholder height="600px">
+          <p className="text-right">IMAGE OF SITES</p>
+        </ImgPlaceholder>
       </section>
     </section>
   )
