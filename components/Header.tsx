@@ -25,14 +25,15 @@ interface MenusProps {
 }
 
 const Header = () => {
-  // const { setTheme, theme } = useTheme()
-  // const handleSwitchTheme = () => {
-  //   if (theme === "light"){
-  //     setTheme("dark")
-  //   } else {
-  //     setTheme("light")
-  //   }
-  // }
+  const { setTheme, theme } = useTheme()
+  const handleSwitchTheme = () => {
+    if (theme && theme === "light"){
+      setTheme("dark")
+    } else {
+      setTheme("light")
+    }
+  }
+
   const menus: MenusProps[] = [
     {
       title: "Our Products",
@@ -102,9 +103,11 @@ const Header = () => {
         <div className="flex items-center gap-6">
           <Button variant="ghost" className="!bg-transparent text-[#687076] hover:text-black">Sign in</Button>
           <Link href="https://dashboard.zaviago.com" className="purple-button">Register</Link>
-          {/* <Button onClick={handleSwitchTheme}>
-            {theme === "light" ? <Sun /> : <Moon />}
-          </Button> */}
+          {theme && (
+            <Button onClick={handleSwitchTheme} variant="ghost">
+              {theme === "light" ? <Sun /> : <Moon />}
+            </Button>
+          )}
         </div>
       </div>
     </header>
