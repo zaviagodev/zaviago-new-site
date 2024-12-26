@@ -34,7 +34,7 @@ const MobileSidebarMenu = () => {
           {menus.map(menu => (
             <>
               {menu.content ? (
-                <Accordion type="single" collapsible>
+                <Accordion type="single" collapsible key={menu.title}>
                   <AccordionItem value={menu.title} className="!border-b-0">
                     <AccordionTrigger className="text-sm px-4 py-2">{menu.title}</AccordionTrigger>
                     <AccordionContent>
@@ -43,7 +43,7 @@ const MobileSidebarMenu = () => {
                   </AccordionItem>
                 </Accordion>
               ) : (
-                <Link href={menu.link}>
+                <Link href={menu.link} key={menu.link}>
                   <Button variant="ghost" className="w-full justify-start">{menu.title}</Button>
                 </Link>
               )}
