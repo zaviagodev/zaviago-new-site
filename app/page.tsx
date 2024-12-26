@@ -5,19 +5,22 @@ import { orderManagementSystems, storefrontSystems, trustedBrands, siteBuilderSy
 import HeroVideoDialog from "@/components/ui/hero-video-dialog";
 import { textGradient } from "@/lib/utils";
 import Link from "next/link";
+import ImgPlaceholder from "@/components/ImgPlaceholder";
 
 export default function Home() {
   return (
     <section className="flex flex-col gap-10 pt-20">
       <section className="flex flex-col gap-10 text-center px-10">
         {/* TODO: paste image of swappers */}
+        <ImgPlaceholder height="300px" width="500px" className="mx-auto">
+          <h1>IMAGES OF SWAPPERS!</h1>
+        </ImgPlaceholder>
         <h1 className="main-header">
           จัดการงานและธุรกิจ<br/>
           <span className="text-mainpurple">ทั้งหมด</span>
           ของคุณ
         </h1>
-        <p className="text-shadegray font-semibold">แพลตฟอร์ม WorkSuite ตั้งแต่จัดการธุรกิจ จัดการโปรเจ็ค, สร้างเว็บไซต์, ขายสินค้า , <br/>จัดการคำสั่งซื้อ ระบบ CRM และ Point & Reward จนถึง ระบบรวมแชท</p>      <h1>IMAGE WILL BE PASTED SOON!</h1>
-        
+        <p className="text-shadegray font-semibold">แพลตฟอร์ม WorkSuite ตั้งแต่จัดการธุรกิจ จัดการโปรเจ็ค, สร้างเว็บไซต์, ขายสินค้า , <br/>จัดการคำสั่งซื้อ ระบบ CRM และ Point & Reward จนถึง ระบบรวมแชท</p>
 
         <Link href="https://dashboard.zaviago.com" className="purple-button">เริ่มใช้ฟรี</Link>
 
@@ -28,7 +31,7 @@ export default function Home() {
 
       <section className="small-container flex flex-col gap-20">
         <div className="flex gap-12 items-center w-full">
-          <p className="text-xs text-shadegray-200 font-medium">Trusted by industry leaders and innovators</p>
+          <p className="text-xs text-shadegray-200 font-medium">Trusted by industrial leaders and innovators</p>
           <ul className="flex justify-between items-center w-full">
             <ImgList list={trustedBrands}/>
           </ul>
@@ -70,11 +73,21 @@ export default function Home() {
         </div>
 
         {/* TODO: paste image or template of Storefront */}
-        <h1>STOREFRONT IMAGE OR TEMPLATE WILL BE PASTED SOON!</h1>
+        <ImgPlaceholder height="640px" width="1080px" className="mx-auto">
+          <h1>STOREFRONT IMAGE OR TEMPLATE WILL BE PASTED SOON!</h1>
+        </ImgPlaceholder>
 
         <div className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20">
           <h2 className="p-12">ให้คุณมั่นใจได้ตั้งแต่เริ่มสร้างเว็บจนถึงยอดขายร้อยล้าน <span className="text-mainpurple">ด้วยเครื่องมือสร้างเว็บไซต์ที่ทรงพลัง</span> สุดปังกับฟีเจอร์และการทำการตลาด</h2>
           <h2 className="p-12">ลูกค้าของคุณเข้าถึงเว็บไซต์ได้มากขึ้น <span className="text-mainpurple">รองรับทุกรูปแบบไม่ว่าจะเป็น คอมพิวเตอร์ หรือ บนมือถือ</span> เพื่อมุ่งสู่ยอดขายที่คุณต้องการ</h2>
+        </div>
+
+        <div className="flex items-center">
+          <ImgPlaceholder height="240px" width="360px"></ImgPlaceholder>
+          <ImgPlaceholder height="360px" width="360px"></ImgPlaceholder>
+          <ImgPlaceholder height="480px" width="360px">Gray Croissant</ImgPlaceholder>
+          <ImgPlaceholder height="360px" width="360px"></ImgPlaceholder>          
+          <ImgPlaceholder height="240px" width="360px"></ImgPlaceholder>
         </div>
 
         <ViewMoreSheet buttonText="More on Storefront" title="Store-front.">
@@ -92,11 +105,20 @@ export default function Home() {
           </ul>
         </div>
 
-        <p className="text-center">ONE VIDEO Placeholder</p>
+        <ImgPlaceholder height="418px">
+          <p className="text-center">ONE VIDEO Placeholder</p>
+        </ImgPlaceholder>
 
         <h2 className="font-medium text-2xl text-left text-shadegray-200 p-12">สร้างเว็บไซต์สำเร็จรูปของคุณด้วยเครื่องมือที่ใช้ง่าย ไม่ต้องเขียนโค้ด ตกแต่งและแชร์เว็บดีๆของคุณได้อย่างอิสระ</h2>
 
-        <p className="text-center">TWO VIDEOS Placeholder</p>
+        <div className="flex gap-5">
+          <ImgPlaceholder height="600px">
+            <p className="text-center">ONE VIDEO Placeholder</p>
+          </ImgPlaceholder>
+          <ImgPlaceholder height="600px">
+            <p className="text-center">ONE VIDEO Placeholder</p>
+          </ImgPlaceholder>
+        </div>
 
         <div className="font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20">
           <h2 className="p-12">ไม่ว่าใครก็สามารถสร้างสรรค์เว็บไซต์ที่เป็นมากกว่าเว็บไซต์ได้! จัดการปรับแต่งหน้าเว็บตามที่คุณต้องการได้ง่าย ๆ</h2>
@@ -123,7 +145,9 @@ export default function Home() {
           </ul>
         </div>
 
-        <p className="text-center">Phone Points and Rewards Placeholder</p>
+        <ImgPlaceholder height="600px">
+          <p className="text-center">Phone Points and Rewards Placeholder</p>
+        </ImgPlaceholder>
 
         <div className="font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20">
           <h2 className="p-12">ดึงดูดลูกค้าของคุณเข้าสู่ระบบ<span className="text-mainpurple">สะสมแต้ม สร้างของรางวัล เพิ่มคูปอง มอบสิทธิพิเศษ</span> กระตุ้นการขายอย่างต่อเนื่อง</h2>
@@ -131,24 +155,55 @@ export default function Home() {
         </div>
 
         <ViewMoreSheet buttonText="More on Points and Rewards" title="Points & Rewards">
-          Hello
+          <div className="flex flex-col gap-10">
+            <ImgPlaceholder height="600px">
+              <h1>POINTS AND REWARDS IMAGE</h1>
+            </ImgPlaceholder>
+
+            <div className="space-y-4 w-3/4">
+              <h1 className="text-4xl font-semibold">ระบบสะสมแต้ม<br/>และแลกของรางวัล</h1>
+              <p className="text-shadegray-200 font-medium text-xl">เชื่อมร้านของคุณเข้ากับ <span className="text-shadegray-300">LINE Official Account</span> สร้าง Loyalty Program ไม่จำเป็นต้องโหลดแอปให้ยุ่งยาก และเปิดระบบ Members พร้อม Loyalty Program</p>
+            </div>
+
+            <ImgPlaceholder height="600px">
+              <h1>POINTS AND REWARDS IMAGE</h1>
+            </ImgPlaceholder>
+
+            <div className="grid md:grid-cols-2 gap-10">
+              <div className="space-y-4">
+                <h1 className="text-4xl font-semibold">สมัครสมาชิกเพียง<br/>แค่กรอกเบอร์</h1>
+                <p className="text-shadegray-200 font-medium text-xl">เปิดระบบสมัครสมาชิก <span className="text-shadegray-300">เพียงลูกค้าแค่กรอกเบอร์และ OTP</span> ต่อยอดด้วยการแยกกลุ่มสมาชิก สร้าง Level ในการสะสมแต้ม ทำแคมเปญเฉพาะลูกค้าแต่ละกลุ่ม <span className="text-shadegray-300">พร้อมสร้างแคมเปญเพื่อกระตุ้นยอดขายต่างๆในการสะสมแต้มหรือ</span> ทำ Cashback ง่ายๆผ่านไลน์ไอดีของลูกค้า</p>
+              </div>
+              <ImgPlaceholder height="600px">
+                <h1>POINTS AND REWARDS IMAGE</h1>
+              </ImgPlaceholder>
+            </div>
+
+            <div className="bg-gray-600 -m-20 pb-40 p-20"> {/* TODO: Set background image */}
+              <h1 className="sub-header !text-white font-semibold">แลกของรางวัลผ่าน App และรับของจากหน้าร้าน</h1>
+            </div>
+          </div>
         </ViewMoreSheet>
       </section>
 
-      <section className="small-container">
+      <section className="small-container pb-10">
         <div className="flex flex-col gap-[200px] text-3xl font-semibold">
-          <h1>เปิดระบบผ่านไลน์ของธุรกิจคุณได้ โดยไม่ต้องมีแอปเพิ่ม</h1> {/* LINE Features */}
+          <h1>เปิดระบบผ่านไลน์ของธุรกิจคุณได้ โดยไม่ต้องมีแอปเพิ่ม</h1>
           <h1>สมัครง่ายด้วยระบบที่เชื่อมต่อไลน์ไอดีและเบอร์ลูกค้า</h1> {/* Register with LINE via phone number and/or Line ID */}
           <h1>มีหน้าระบบสมาชิกและการแลกของรางวัลเหมือน ซูปเปอร์แอปต่างๆในตลาด</h1>
           <h1>กำหนดและตั้งค่า ระดับสมาชิก เพื่อจัดการสิทธิพิเศษได้</h1>
           <h1>เช็คคะแนนเรียลไทม์ แสกนและรับของรางวัล หน้าร้านค้าได้เลย</h1>
+
+          <ImgPlaceholder height="600px" width="340px" className="sticky -bottom-10 mx-auto">PHONE IMAGE</ImgPlaceholder>
         </div>
       </section>
 
       <section className="flex flex-col items-center py-[175px] bg-shadegray-500 px-10 gap-10">
-        <div className="small-container flex flex-col items-center">
+        <div className="small-container flex flex-col items-center gap-10">
           <h1 className="font-semibold sub-header">มีระบบ <span className="text-mainpurple">รวมแชทในที่เดียว</span><br/> ดูแลลูกค้าพร้อมกันได้หลายแพลตฟอร์ม</h1>
-        
+
+          <ImgPlaceholder height="600px" width="1000px">DASHBOARD IMAGE</ImgPlaceholder>
+
           <h1 className="max-w-[490px] font-semibold sub-header">เพิ่มประสิทธิภาพทีม<br/>แอดมินในการดูแล</h1>
 
           <div className="max-w-[490px] flex flex-col gap-5 pt-20">
@@ -158,7 +213,9 @@ export default function Home() {
         </div>
 
         <ViewMoreSheet buttonText="More on Team Chat" title="Points & Rewards">
-          Hello
+          <ImgPlaceholder height="600px">
+            <h1>POINTS AND REWARDS IMAGE</h1>
+          </ImgPlaceholder>
         </ViewMoreSheet>
       </section>
 
@@ -188,6 +245,8 @@ export default function Home() {
             <ImgList list={dataInsightSystems}/>
           </ul>
         </div>
+
+        <ImgPlaceholder height="400px" width="1000px">DATA INSIGHT IMAGE</ImgPlaceholder>
       </section>
 
       <section className="flex flex-col items-center py-20 px-10 text-center gap-5">
@@ -200,6 +259,8 @@ export default function Home() {
             <ImgList list={salesHubSystems}/>
           </ul>
         </div>
+
+        <ImgPlaceholder height="400px" width="1000px">SALES HUB IMAGE</ImgPlaceholder>
       </section>
 
       <section className="grid md:grid-cols-2">
@@ -213,10 +274,12 @@ export default function Home() {
               <ImgList list={inStoreSystems}/>
             </ul>
           </div>
+          <ImgPlaceholder height="400px">IN STORE IMAGE</ImgPlaceholder>
         </section>
-        <section className="flex flex-col items-center py-20 px-10 text-center">
+        <section className="flex flex-col items-center py-20 px-10 text-center gap-5">
           <h1 className="font-recoleta text-[60px] font-bold">in.front</h1>
           <p>อุปกรณ์ POS Hardware</p>
+          <ImgPlaceholder height="400px">IN FRONT IMAGE</ImgPlaceholder>
         </section>
       </section>
 
@@ -224,10 +287,12 @@ export default function Home() {
         <section className="flex flex-col items-center py-20 px-10 text-center gap-5">
           <h1 className="font-recoleta text-[60px] font-bold">hr.space</h1>
           <p>HRM โปรแกรมบริหารพนักงาน</p>
+          <ImgPlaceholder height="400px">HR SPACE IMAGE</ImgPlaceholder>
         </section>
-        <section className="flex flex-col items-center py-20 px-10 text-center">
+        <section className="flex flex-col items-center py-20 px-10 text-center gap-5">
           <h1 className="font-recoleta text-[60px] font-bold">Drive</h1>
           <p>เก็บไฟล์และอัฟโหลดไฟล์ของคุณ</p>
+          <ImgPlaceholder height="400px">DRIVE IMAGE</ImgPlaceholder>
         </section>
       </section>
     </section>

@@ -27,12 +27,14 @@ const ViewMoreSheet = ({ children, buttonText, title, desc, contentClassName } :
           <Plus />
         </div>
       </SheetTrigger>
-      <SheetContent side="bottom" className={cn("max-w-[1100px] m-auto h-full top-20 rounded-3xl p-0", contentClassName)}>
+      <SheetContent side="bottom" className={cn("max-w-[1100px] m-auto h-full top-20 rounded-3xl p-0 overflow-auto scrollbar-none", contentClassName)}>
         <SheetHeader className="p-20">
-          <SheetTitle>{title}</SheetTitle>
+          <SheetTitle className="text-5xl">{title}</SheetTitle>
           {desc ? <SheetDescription>{desc}</SheetDescription> : null}
         </SheetHeader>
-        {children}
+        <div className="px-20 pb-20">
+          {children}
+        </div>
       </SheetContent>
     </Sheet>
   )

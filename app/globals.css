@@ -133,3 +133,7 @@
 .main-header {
   @apply text-shadegray-400 text-[42px] md:text-[78px] font-semibold leading-[1.2em] tracking-[-0.8px]
 }
+
+.scrollbar-none {
+  scrollbar-width:none;
+}
