@@ -16,6 +16,7 @@ const JobsPage = () => {
       <div className="flex flex-col gap-6">
         <JobsList department="Engineering"/>
         <JobsList department="Design"/>
+        <JobsList department="Trainee Program"/>
       </div>
     </section>
   )

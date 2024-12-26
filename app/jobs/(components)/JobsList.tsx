@@ -22,7 +22,10 @@ const JobsList = ({ department } : JobsListProps) => {
           <Link href={`jobs/${data.id}`} key={data.title}>
           <Card>
             <CardHeader>
-              <CardTitle>{data.title}</CardTitle>
+              <CardTitle>
+                {data.isUrgent ? <span className="text-red-500 font-semibold border border-red-500 bg-red-100 text-sm rounded-sm px-3 py-1 w-fit">URGENT!</span> : null}
+                {data.title}
+              </CardTitle>
               <CardDescription>{data.type}</CardDescription>
             </CardHeader>
           </Card>

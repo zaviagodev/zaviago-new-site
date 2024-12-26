@@ -64,5 +64,13 @@ export const jobsData: JobsDataProps[] = [
     location: "Bangkok",
     isUrgent: true,
     department: "Design"
-  }
+  },
+  {
+    id:"uxui-trainee",
+    title: "UX-UI Trainee",
+    type: "Contract",
+    location: "Bangkok",
+    isUrgent: false,
+    department: "Trainee Program"
+  },
 ]

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { jobsData, JobsDetailsProps } from "../data"
 
 const JobsDesc = ({ params } : { params: {job: string} }) => {
+  console.log(params)
   const jobsid = jobsData.find(data => data.id === params.job)
   const jobsdetails: { key: keyof JobsDetailsProps, label: string }[] = [
     { key: "about_us", label: "About Us" },
@@ -17,8 +18,8 @@ const JobsDesc = ({ params } : { params: {job: string} }) => {
   return (
     <section className="small-container py-20 flex flex-col gap-10">
       <div className="flex flex-col gap-4">
+        {jobsid?.isUrgent ? <span className="text-red-500 font-semibold border border-red-500 bg-red-100 rounded-sm px-3 py-1 w-fit">URGENT!</span> : null}
         <h1 className="sub-header font-semibold">
-          {jobsid?.isUrgent ? <span className="text-red-500 mr-2">URGENT!</span> : null}
           {jobsid?.title}
         </h1>
         <div className="flex gap-4 items-center">
