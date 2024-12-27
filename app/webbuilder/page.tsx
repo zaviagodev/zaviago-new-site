@@ -2,17 +2,18 @@ import ImgPlaceholder from "@/components/ImgPlaceholder"
 import ViewMoreSheet from "@/components/main/ViewMoreSheet"
 import { Button } from "@/components/ui/button"
 import HeroVideoDialog from "@/components/ui/hero-video-dialog"
+import WebbuilderComp from "@/components/webbuilder/webbuilder"
 import { Check, X } from "lucide-react"
 
 const Webbuilder = () => {
   return (
     <section className="flex flex-col gap-10 py-20">
-      <section className="flex flex-col items-center gap-10 main-container">
+      <section className="flex flex-col items-center gap-10 px-10 max-w-[1500px] w-full mx-auto">
         <h2 className="text-xl font-semibold text-center">ง่ายกว่า Wix, SquareSpace, MakeWebEasy และ lnwShop<br/> ก็เรานี้แหละ ใช้ฟรีอีกด้วยนะ!</h2>
 
-        <ImgPlaceholder height="900px">
-          WEB BUILDER
-        </ImgPlaceholder>
+        <aside className="overflow-hidden relative shadow-main rounded-lg w-full">
+          <WebbuilderComp />
+        </aside>
 
         <p className="text-shadegray font-semibold">ไม่ต้องเขียนโค้ด มีแค่ Tablet หรือ iPad ก็เปิดเว็บได้เลย</p>
         <Button>เปิดเว็บไซต์ฟรี</Button>
