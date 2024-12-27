@@ -6,6 +6,10 @@ import HeroVideoDialog from "@/components/ui/hero-video-dialog";
 import { textGradient } from "@/lib/utils";
 import Link from "next/link";
 import ImgPlaceholder from "@/components/ImgPlaceholder";
+import PhoneConnection from "@/components/PhoneConnection";
+import ProductCard from "@/components/ecommerce/product-card";
+import headphoneImg from "@/public/mock-products/headphone.png"
+import bagImg from "@/public/mock-products/bag.png"
 
 export default function Home() {
   return (
@@ -82,12 +86,12 @@ export default function Home() {
           <h2 className="p-12">ลูกค้าของคุณเข้าถึงเว็บไซต์ได้มากขึ้น <span className="text-mainpurple">รองรับทุกรูปแบบไม่ว่าจะเป็น คอมพิวเตอร์ หรือ บนมือถือ</span> เพื่อมุ่งสู่ยอดขายที่คุณต้องการ</h2>
         </div>
 
-        <div className="flex items-center">
-          <ImgPlaceholder height="240px" width="360px"></ImgPlaceholder>
-          <ImgPlaceholder height="360px" width="360px"></ImgPlaceholder>
-          <ImgPlaceholder height="480px" width="360px">Gray Croissant<br/>I mean, product cards</ImgPlaceholder>
-          <ImgPlaceholder height="360px" width="360px"></ImgPlaceholder>          
-          <ImgPlaceholder height="240px" width="360px"></ImgPlaceholder>
+        <div className="flex items-center main-container">
+          <ProductCard imgSrc={headphoneImg} title="Headphone" category="Pomelo" cardClassName="-mr-8 relative z-2 scale-[0.9]"/>
+          <ProductCard imgSrc={bagImg} title="Bag" category="Adidas" cardClassName="-mr-8 relative z-3 scale-[0.95]"/>
+          <ProductCard imgSrc={headphoneImg} title="Headphone" category="Nike" cardClassName="m-0 relative z-4"/>
+          <ProductCard imgSrc={headphoneImg} title="Headphone" category="Nanyang" cardClassName="-ml-8 relative z-3 scale-[0.95]"/>
+          <ProductCard imgSrc={headphoneImg} title="Headphone" category="Edifier" cardClassName="-ml-8 relative z-2 scale-[0.9]"/>
         </div>
 
         <ViewMoreSheet buttonText="More on Storefront" title="Store-front.">
@@ -186,17 +190,7 @@ export default function Home() {
         </ViewMoreSheet>
       </section>
 
-      <section className="small-container pb-10">
-        <div className="flex flex-col gap-[200px] text-3xl font-semibold">
-          <h1>เปิดระบบผ่านไลน์ของธุรกิจคุณได้ โดยไม่ต้องมีแอปเพิ่ม</h1>
-          <h1>สมัครง่ายด้วยระบบที่เชื่อมต่อไลน์ไอดีและเบอร์ลูกค้า</h1> {/* Register with LINE via phone number and/or Line ID */}
-          <h1>มีหน้าระบบสมาชิกและการแลกของรางวัลเหมือน ซูปเปอร์แอปต่างๆในตลาด</h1>
-          <h1>กำหนดและตั้งค่า ระดับสมาชิก เพื่อจัดการสิทธิพิเศษได้</h1>
-          <h1>เช็คคะแนนเรียลไทม์ แสกนและรับของรางวัล หน้าร้านค้าได้เลย</h1>
-
-          <ImgPlaceholder height="600px" width="340px" className="sticky -bottom-10 mx-auto">PHONE IMAGE</ImgPlaceholder>
-        </div>
-      </section>
+      <PhoneConnection />
 
       <section className="flex flex-col items-center py-[175px] bg-shadegray-500 px-10 gap-10">
         <div className="small-container flex flex-col items-center gap-10">

@@ -1,4 +1,5 @@
 import ImgPlaceholder from "@/components/ImgPlaceholder"
+import PhoneConnection from "@/components/PhoneConnection"
 
 const CRMPage = () => {
   return (
@@ -28,17 +29,7 @@ const CRMPage = () => {
         </div>
       </section>
 
-      <section className="small-container pb-10">
-        <div className="flex flex-col gap-[200px] text-3xl font-semibold">
-          <h1>เปิดระบบผ่านไลน์ของธุรกิจคุณได้ โดยไม่ต้องมีแอปเพิ่ม</h1>
-          <h1>สมัครง่ายด้วยระบบที่เชื่อมต่อไลน์ไอดีและเบอร์ลูกค้า</h1>
-          <h1>มีหน้าระบบสมาชิกและการแลกของรางวัลเหมือน ซูปเปอร์แอปต่างๆในตลาด</h1>
-          <h1>กำหนดและตั้งค่า ระดับสมาชิก เพื่อจัดการสิทธิพิเศษได้</h1>
-          <h1>เช็คคะแนนเรียลไทม์ แสกนและรับของรางวัล หน้าร้านค้าได้เลย</h1>
-
-          <ImgPlaceholder height="600px" width="340px" className="sticky -bottom-10 mx-auto">PHONE IMAGE</ImgPlaceholder>
-        </div>
-      </section>
+      <PhoneConnection />
 
       <section className="flex flex-col items-center gap-10 main-container">
         <h2 className="sub-header text-center font-semibold">ใช้ง่าย ฟีเจอร์เต็ม เปิดตัวระบบสมาชิก<br/>ของคุณเพียงไม่กี่คลิก</h2>

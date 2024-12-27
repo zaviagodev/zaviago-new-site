@@ -27,6 +27,9 @@ export const menus: MenusProps[] = [
           <Link href="/webbuilder">
             <Button variant="ghost" className="w-full justify-start">Web Builder</Button>
           </Link>
+          <Link href="/crm">
+            <Button variant="ghost" className="w-full justify-start">CRM</Button>
+          </Link>
         </div>
       )
     },

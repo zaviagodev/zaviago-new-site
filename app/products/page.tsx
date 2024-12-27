@@ -2,6 +2,9 @@ import MainDashboard from "@/components/dashboard/main-dashboard"
 import { textGradient } from "@/lib/utils"
 import { ImgList, lineOASystems, storefrontSystems, teamChatSystems } from "../data"
 import ImgPlaceholder from "@/components/ImgPlaceholder"
+import SingleProduct from "@/components/ecommerce/single-product"
+import headphoneImg from "@/public/mock-products/headphone.png"
+import ChatPage from "@/components/chat/chat-page"
 
 const Products = () => {
   return (
@@ -59,28 +62,28 @@ const Products = () => {
             <ImgList list={storefrontSystems}/>
           </ul>
         </div>
-
-        <ImgPlaceholder height="600px">
-          <p className="text-center">IMAGE FOR STOREFRONT</p>
-        </ImgPlaceholder>
+        <aside className="overflow-hidden relative shadow-main rounded-lg">
+          <SingleProduct imgSrc={headphoneImg} title="Headphone"/>
+        </aside>
       </section>
 
-      <section className="p-10 bg-shadewhite-100 flex flex-col gap-10">
-        <div className="flex flex-col items-center">
-          <h1 className="text-3xl md:text-[56px] font-semibold leading-[1.2em] tracking-[-0.8px] text-black" style={textGradient("linear-gradient(100deg, rgb(0, 183, 224) 0%, rgb(64, 0, 255) 100%)")}>Teamchat</h1>
-          <p>ระบบรวมแชทจากทุกช่องทางในที่เดียว</p>
-        </div>
+      <section className="p-10 bg-shadewhite-100">
+        <div className="main-container  flex flex-col gap-10">
+          <div className="flex flex-col items-center">
+            <h1 className="text-3xl md:text-[56px] font-semibold leading-[1.2em] tracking-[-0.8px] text-black" style={textGradient("linear-gradient(100deg, rgb(0, 183, 224) 0%, rgb(64, 0, 255) 100%)")}>Teamchat</h1>
+            <p>ระบบรวมแชทจากทุกช่องทางในที่เดียว</p>
+          </div>
 
-        <div className="flex flex-col gap-5 w-full items-center">
-          <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
-          <ul className="flex items-center gap-8 w-full justify-center flex-wrap">
-            <ImgList list={teamChatSystems}/>
-          </ul>
+          <div className="flex flex-col gap-5 w-full items-center">
+            <p className="text-xs text-shadegray-200 font-medium">ใช้แทนระบบอื่นเช่น</p>
+            <ul className="flex items-center gap-8 w-full justify-center flex-wrap">
+              <ImgList list={teamChatSystems}/>
+            </ul>
+          </div>
+          <aside className="overflow-hidden relative shadow-main rounded-lg">
+            <ChatPage />
+          </aside>
         </div>
-
-        <ImgPlaceholder height="600px">
-          <p className="text-center">IMAGE FOR TEAMCHAT</p>
-        </ImgPlaceholder>
       </section>
     </section>
   )

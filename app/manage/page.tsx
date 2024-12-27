@@ -1,4 +1,5 @@
 import MainDashboard from "@/components/dashboard/main-dashboard"
+import ProductDashboard from "@/components/ecommerce/product-dashboard"
 import ImgPlaceholder from "@/components/ImgPlaceholder"
 import FeatureCards from "@/components/main/FeatureCards"
 import {
@@ -69,8 +70,9 @@ const service_cards: ServiceCardProps[] = [
     title:"สต็อกอัปเดตเรียลไทม์ พร้อมฟีเจอร์ เช็คการเข้า - ออกของสินค้าในโกดัง",
     desc:"จัดการสินค้าคงคลังได้อย่างง่ายดาย ครอบคลุมทั้งช่องทางการขายและคลังสินค้าหลายแห่ง พร้อมรับภาพรวมของสต็อกสินค้าแบบเรียลไทม์",
     content: (
-      <ImgPlaceholder height="600px">
-      </ImgPlaceholder>
+      <aside className="overflow-hidden relative shadow-main rounded-lg">
+        <ProductDashboard />
+      </aside>
     )
   },
   {

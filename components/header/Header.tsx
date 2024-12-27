@@ -21,13 +21,7 @@ import { menus } from "./menus"
 
 const Header = () => {
   const { setTheme, theme } = useTheme()
-  const handleSwitchTheme = () => {
-    if (theme && theme === "light"){
-      setTheme("dark")
-    } else {
-      setTheme("light")
-    }
-  }
+  const handleSwitchTheme = () => setTheme(theme === "light" ? "dark" : "light")
 
   return (
     <header className="header" style={{backdropFilter:"blur(10px)"}}>
@@ -63,7 +57,8 @@ const Header = () => {
             <Link href="https://dashboard.zaviago.com" className="purple-button">Register</Link>
             {theme && (
               <Button onClick={handleSwitchTheme} variant="ghost">
-                {theme === "light" ? <Sun /> : <Moon />}
+                <Sun className="dark:hidden"/>
+                <Moon className="hidden dark:block"/>
               </Button>
             )}
           </div>
