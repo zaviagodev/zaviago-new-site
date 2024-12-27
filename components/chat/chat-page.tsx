@@ -5,11 +5,31 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 
+interface TranslatedTextProps {
+  text: string
+  translatedText: string
+  isTranslated: boolean
+}
+
 export default function ChatPage() {
   const [user, setUser] = useState({
     name:"Changlin Yu",
-    avatar:"CY"
+    avatar:"CY",
   })
+  const translateText: TranslatedTextProps[] = [
+    {
+      text:"您好，我们一起商量项目内容吧。",
+      translatedText:"Hey, let's discuss the project details.",
+      isTranslated: false
+    }
+  ];
+
+  function updateIsTranslated(arr: string, index: number, newValue: boolean) {
+    if (arr[index]) {
+      arr[index].isTranslated = newValue;
+    }
+  }
+
   const randomChatText: string[] = ["If you have any questions, please feel free to ask."]
   return (
     <div className="flex h-screen w-full">
@@ -91,7 +111,8 @@ export default function ChatPage() {
                 <AvatarFallback>{user.avatar}</AvatarFallback>
               </Avatar>
               <div className="flex-1 rounded-md bg-gray-100 dark:bg-gray-800 p-4">
-                <p>Hey, let's discuss the project details.</p>
+                <p>{translateText[0].isTranslated ? translateText[0].translatedText : translateText[0].text}</p>
+                <p className="text-xs hover:underline cursor-pointer">{translateText[0].isTranslated ? "Show original" : "Translate"}</p>
                 <div className="text-xs text-gray-500 dark:text-gray-400 mt-2">2h ago</div>
               </div>
             </div>

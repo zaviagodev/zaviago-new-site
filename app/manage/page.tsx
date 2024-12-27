@@ -1,4 +1,6 @@
 import MainDashboard from "@/components/dashboard/main-dashboard"
+import CustomerDashboard from "@/components/ecommerce/customer-dashboard"
+import Printing from "@/components/ecommerce/printing"
 import ProductDashboard from "@/components/ecommerce/product-dashboard"
 import ImgPlaceholder from "@/components/ImgPlaceholder"
 import FeatureCards from "@/components/main/FeatureCards"
@@ -54,16 +56,18 @@ const service_cards: ServiceCardProps[] = [
     title:"รองรับการพิมพ์งานเอกสาร งานภาษี และเอกสารอื่นๆ",
     desc:"For printing",
     content: (
-      <ImgPlaceholder height="600px">
-      </ImgPlaceholder>
+      <aside className="overflow-hidden relative shadow-main rounded-lg">
+        <Printing />
+      </aside>
     )
   },
   {
     title:"เก็บข้อมูลลูกค้า เพื่อทำการการตลาด",
     desc:"รองรับลูกค้าทุกประเภท ตั้งแต่ลูกค้า B2C ที่มีตัวเลือกบริการตนเอง ไปจนถึงบัญชี B2B และกลุ่มลูกค้าที่มีการกำหนดค่าผลิตภัณฑ์และราคาพิเศษ ทั้งหมดสามารถกำหนดค่าได้โดยตรงจากระบบจัดการของคุณ",
     content: (
-      <ImgPlaceholder height="600px">
-      </ImgPlaceholder>
+      <aside className="overflow-hidden relative shadow-main rounded-lg">
+        <CustomerDashboard />
+      </aside>
     )
   },
   {
