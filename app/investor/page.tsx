@@ -5,6 +5,7 @@ import { companies_icons } from "../data"
 import Image from "next/image"
 import FeatureCards from "@/components/main/FeatureCards"
 import ImgPlaceholder from "@/components/ImgPlaceholder"
+import ProductDashboard from "@/components/ecommerce/product-dashboard"
 
 const InvestorPage = () => {
   const InvestorData = ({ data, className } : DataCompProps) => {
@@ -95,7 +96,9 @@ const InvestorPage = () => {
       <section className="py-20 main-container">
         <h1 className="text-shadegray-400 text-[42px] md:text-[56px] font-semibold leading-[1.2em] tracking-[-0.8px]"><span className="text-mainpurple">We continue to expand zaviago's breadth</span> to make it even easier for merchants to start and scale their business</h1>
       
-        <p className="text-center">IMAGE OF DASHBOARD</p>
+        <aside className="overflow-hidden relative shadow-main rounded-lg">
+          <ProductDashboard />
+        </aside>
       </section>
 
       <section className="main-container flex flex-col gap-10">

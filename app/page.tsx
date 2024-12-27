@@ -10,15 +10,15 @@ import PhoneConnection from "@/components/PhoneConnection";
 import ProductCard from "@/components/ecommerce/product-card";
 import headphoneImg from "@/public/mock-products/headphone.png"
 import bagImg from "@/public/mock-products/bag.png"
+import ImgCarousel from "@/components/ImgCarousel";
 
 export default function Home() {
   return (
     <section className="flex flex-col gap-10 pt-20">
       <section className="flex flex-col gap-10 text-center px-10">
-        {/* TODO: paste image of swappers */}
-        <ImgPlaceholder height="300px" width="500px" className="mx-auto">
-          <h1>IMAGES OF SWAPPERS!</h1>
-        </ImgPlaceholder>
+        <div className="max-w-[300px] mx-auto w-full">
+          <ImgCarousel />
+        </div>
         <h1 className="main-header">
           จัดการงานและธุรกิจ<br/>
           <span className="text-mainpurple">ทั้งหมด</span>

@@ -5,6 +5,7 @@ import ImgPlaceholder from "@/components/ImgPlaceholder"
 import SingleProduct from "@/components/ecommerce/single-product"
 import headphoneImg from "@/public/mock-products/headphone.png"
 import ChatPage from "@/components/chat/chat-page"
+import PointsDashboard from "@/components/ecommerce/points-dashboard"
 
 const Products = () => {
   return (
@@ -44,9 +45,9 @@ const Products = () => {
           </ul>
         </div>
 
-        <ImgPlaceholder height="600px">
-          <p className="text-center">IMAGE FOR POINTS AND REWARDS</p>
-        </ImgPlaceholder>
+        <aside className="overflow-hidden relative shadow-main rounded-lg">
+          <PointsDashboard />
+        </aside>
       </section>
 
       <section className="p-10 bg-black text-white flex flex-col gap-10">

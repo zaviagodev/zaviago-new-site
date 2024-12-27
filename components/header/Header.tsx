@@ -37,7 +37,7 @@ const Header = () => {
                   {menu.content ? (
                     <div className="relative">
                       <NavigationMenuTrigger className="!bg-transparent">{menu.title}</NavigationMenuTrigger>
-                      <NavigationMenuContent className="p-4 left-0 !w-[500px]">
+                      <NavigationMenuContent className="p-4 left-0 !w-[600px]">
                         {menu.content}
                       </NavigationMenuContent>
                     </div>
