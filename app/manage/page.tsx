@@ -112,7 +112,7 @@ const ManagePage = () => {
       </section>
 
       <section className="flex flex-col gap-10 px-10 pt-40 pb-10 main-container">
-        <h1 className="text-4xl font-semibold leading-[1.2em] tracking-[-0.8px] text-black">รวมทุกฟีเจอร์ การจัดการธุรกิจ ออนไลน์และออฟไลน์</h1>
+        <h1 className="text-4xl font-semibold leading-[1.2em] tracking-[-0.8px]">รวมทุกฟีเจอร์ การจัดการธุรกิจ ออนไลน์และออฟไลน์</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
           <FeatureCards />
@@ -123,7 +123,7 @@ const ManagePage = () => {
         {service_cards.map(card => (
           <Card key={card.title}>
             <CardHeader>
-              <CardTitle>{card.title}</CardTitle>
+              <CardTitle className="text-4xl font-semibold leading-[1.2em] tracking-[-0.8px]">{card.title}</CardTitle>
               <CardDescription>{card.desc}</CardDescription>
             </CardHeader>
             {card.content && (

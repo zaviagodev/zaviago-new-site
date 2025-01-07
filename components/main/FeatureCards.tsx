@@ -148,7 +148,7 @@ const FeatureCards = () => {
   return (
     <>
       {feature_card_list.map(list => (
-        <Card key={list.title} className="!p-6 w-full">
+        <Card key={list.title} className="!p-6 w-full shadow-featurecard">
           <Accordion type="single" className="w-full" defaultValue={list.title}>
             <AccordionItem value={list.title} className="border-0">
                 <AccordionTrigger className="p-0">

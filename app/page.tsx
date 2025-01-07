@@ -1,3 +1,5 @@
+"use client"
+
 import MainDashboard from "@/components/dashboard/main-dashboard";
 import ViewMoreSheet from "@/components/main/ViewMoreSheet";
 import { Bento } from "@/components/main/Bento";
@@ -11,8 +13,16 @@ import ProductCard from "@/components/ecommerce/product-card";
 import headphoneImg from "@/public/mock-products/headphone.png"
 import bagImg from "@/public/mock-products/bag.png"
 import ImgCarousel from "@/components/ImgCarousel";
+import { motion, useScroll } from "framer-motion";
+import { useRef } from "react";
 
 export default function Home() {
+  const productsRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: productsRef,
+    offset: ["start end", "end start"]
+  })
+
   return (
     <section className="flex flex-col gap-10 pt-20">
       <section className="flex flex-col gap-10 text-center px-10">
@@ -51,11 +61,16 @@ export default function Home() {
       </section>
 
       <section className="small-container flex flex-col gap-10 p-10">
-        <Bento />
-        <div className="font-medium text-2xl text-shadegray-200 grid md:grid-cols-2 gap-4">
+        {/* <Bento /> */}
+        <motion.div 
+          className="font-medium text-2xl text-shadegray-200 grid md:grid-cols-2 gap-4"
+          initial={{ opacity:0, y:20 }}
+          whileInView={{ opacity:1, y:0 }}
+          transition={{ delay:0.3 }}
+        >
           <h2 className="p-12">รวมทุกฟีเจอร์ การจัดการธุรกิจ ออนไลน์และออฟไลน์ <span className="text-mainpurple">จัดการคำสั่งซื้ออย่างเป็นระบบ</span> สุดปังกับฟีเจอร์ที่ครอบคลุมทุกรูปแบบ</h2>
           <h2 className="p-12">ไม่ว่าคุณจะมีกี่ช่องทางการขายก็จัดการได้ <span className="text-mainpurple">ช่วยลดเวลาในการทำงาน และเพิ่มโอกาส</span>ในการสร้างกำไร</h2>
-        </div>
+        </motion.div>
         <ViewMoreSheet buttonText="More on WorkSpace" title="workspace." desc="ระบบจัดการงานธุรกิจทั้งหมดของคุณในที่เดียว">
           <div className="font-medium text-2xl text-shadegray-200 grid md:grid-cols-2 gap-4">
             <h2 className="p-12">รวมทุกฟีเจอร์ การจัดการธุรกิจ ออนไลน์และออฟไลน์ <span className="text-mainpurple">จัดการคำสั่งซื้ออย่างเป็นระบบ</span> สุดปังกับฟีเจอร์ที่ครอบคลุมทุกรูปแบบ</h2>
@@ -81,18 +96,28 @@ export default function Home() {
           <h1>STOREFRONT IMAGE OR TEMPLATE WILL BE PASTED SOON!</h1>
         </ImgPlaceholder>
 
-        <div className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20">
+        <motion.div 
+          className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20"
+          initial={{ opacity:0, y:20 }}
+          whileInView={{ opacity:1, y:0 }}
+          transition={{ delay:0.3 }}
+        >
           <h2 className="p-12">ให้คุณมั่นใจได้ตั้งแต่เริ่มสร้างเว็บจนถึงยอดขายร้อยล้าน <span className="text-mainpurple">ด้วยเครื่องมือสร้างเว็บไซต์ที่ทรงพลัง</span> สุดปังกับฟีเจอร์และการทำการตลาด</h2>
           <h2 className="p-12">ลูกค้าของคุณเข้าถึงเว็บไซต์ได้มากขึ้น <span className="text-mainpurple">รองรับทุกรูปแบบไม่ว่าจะเป็น คอมพิวเตอร์ หรือ บนมือถือ</span> เพื่อมุ่งสู่ยอดขายที่คุณต้องการ</h2>
-        </div>
+        </motion.div>
 
-        <div className="flex items-center main-container">
-          <ProductCard imgSrc={headphoneImg} title="Headphone" category="Pomelo" cardClassName="-mr-8 relative z-2 scale-[0.9]"/>
-          <ProductCard imgSrc={bagImg} title="Bag" category="Adidas" cardClassName="-mr-8 relative z-3 scale-[0.95]"/>
-          <ProductCard imgSrc={headphoneImg} title="Headphone" category="Nike" cardClassName="m-0 relative z-4"/>
-          <ProductCard imgSrc={headphoneImg} title="Headphone" category="Nanyang" cardClassName="-ml-8 relative z-3 scale-[0.95]"/>
-          <ProductCard imgSrc={headphoneImg} title="Headphone" category="Edifier" cardClassName="-ml-8 relative z-2 scale-[0.9]"/>
-        </div>
+        <motion.div 
+          className="flex items-center main-container"
+          initial={{ scale:0.8 }}
+          ref={productsRef}
+          style={{ scale:scrollYProgress }}
+        >
+          <ProductCard imgSrc={headphoneImg} title="Headphone" category="Pomelo" cardClassName="-mr-8 relative z-[1] scale-[0.9]"/>
+          <ProductCard imgSrc={bagImg} title="Bag" category="Adidas" cardClassName="-mr-8 relative z-[2] scale-[0.95]"/>
+          <ProductCard imgSrc={headphoneImg} title="Headphone" category="Nike" cardClassName="m-0 relative z-[3]"/>
+          <ProductCard imgSrc={headphoneImg} title="Headphone" category="Nanyang" cardClassName="-ml-8 relative z-[2] scale-[0.95]"/>
+          <ProductCard imgSrc={headphoneImg} title="Headphone" category="Edifier" cardClassName="-ml-8 relative z-[1] scale-[0.9]"/>
+        </motion.div>
 
         <ViewMoreSheet buttonText="More on Storefront" title="Store-front.">
           Hello
@@ -124,10 +149,15 @@ export default function Home() {
           </ImgPlaceholder>
         </div>
 
-        <div className="font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20">
+        <motion.div 
+          className="font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20"
+          initial={{ opacity:0, y:20 }}
+          whileInView={{ opacity:1, y:0 }}
+          transition={{ delay:0.3 }}
+        >
           <h2 className="p-12">ไม่ว่าใครก็สามารถสร้างสรรค์เว็บไซต์ที่เป็นมากกว่าเว็บไซต์ได้! จัดการปรับแต่งหน้าเว็บตามที่คุณต้องการได้ง่าย ๆ</h2>
           <h2 className="p-12">รองรับทั้งคอมพิวเตอร์ และแท็บเล็ต ไม่ต้องลงโปรแกรม เปิดผ่านเบราว์เซอร์ ใช้งานสะดวกไม่ว่าจะทำที่ไหนก็ตามใจคุณ</h2>
-        </div>
+        </motion.div>
 
         <h1 className="font-semibold sub-header">ทำเว็บไซต์ที่ทรงพลัง ใช้งานง่ายเพียงปลายนิ้วสัมผัส</h1>
         <HeroVideoDialog videoSrc="https://youtu.be/BpUxrR34t58"/>
@@ -153,10 +183,15 @@ export default function Home() {
           <p className="text-center">Phone Points and Rewards Placeholder</p>
         </ImgPlaceholder>
 
-        <div className="font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20">
+        <motion.div 
+          className="font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20"
+          initial={{ opacity:0, y:20 }}
+          whileInView={{ opacity:1, y:0 }}
+          transition={{ delay:0.3 }}
+        >
           <h2 className="p-12">ดึงดูดลูกค้าของคุณเข้าสู่ระบบ<span className="text-mainpurple">สะสมแต้ม สร้างของรางวัล เพิ่มคูปอง มอบสิทธิพิเศษ</span> กระตุ้นการขายอย่างต่อเนื่อง</h2>
           <h2 className="p-12">เข้าถึงได้ง่ายผ่าน<span className="text-mainpurple">แพลตฟอร์มออนไลน์</span> ที่คุณสามารถสร้างสรรค์ จัดการ ปรับแต่ง ตรงตามใจคุณ</h2>
-        </div>
+        </motion.div>
 
         <ViewMoreSheet buttonText="More on Points and Rewards" title="Points & Rewards">
           <div className="flex flex-col gap-10">
@@ -194,11 +229,11 @@ export default function Home() {
 
       <section className="flex flex-col items-center py-[175px] bg-shadegray-500 px-10 gap-10">
         <div className="small-container flex flex-col items-center gap-10">
-          <h1 className="font-semibold sub-header">มีระบบ <span className="text-mainpurple">รวมแชทในที่เดียว</span><br/> ดูแลลูกค้าพร้อมกันได้หลายแพลตฟอร์ม</h1>
-
-          <ImgPlaceholder height="600px" width="1000px">DASHBOARD IMAGE</ImgPlaceholder>
-
-          <h1 className="max-w-[490px] font-semibold sub-header">เพิ่มประสิทธิภาพทีม<br/>แอดมินในการดูแล</h1>
+          <div className="flex flex-col items-center gap-[600px]">
+            <h1 className="font-semibold sub-header">มีระบบ <span className="text-mainpurple">รวมแชทในที่เดียว</span><br/> ดูแลลูกค้าพร้อมกันได้หลายแพลตฟอร์ม</h1>
+            <h1 className="max-w-[490px] font-semibold sub-header">เพิ่มประสิทธิภาพทีม<br/>แอดมินในการดูแล</h1>
+            <ImgPlaceholder height="600px" width="1000px" className="sticky bottom-4">DASHBOARD IMAGE</ImgPlaceholder>
+          </div>
 
           <div className="max-w-[490px] flex flex-col gap-5 pt-20">
             <h1 className="font-semibold sub-header">ตอบโจทย์การดูแล<br/>แชทครบวงจร</h1>

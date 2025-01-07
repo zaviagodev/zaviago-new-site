@@ -19,7 +19,8 @@ export default {
   		},
   		boxShadow: {
   			main: 'rgba(68, 46, 89, 0.24) 1px 1px 22px 2px',
-  			purple: 'rgba(87, 20, 255, 0.4) 0px 0px 12px 1px'
+  			purple: 'rgba(87, 20, 255, 0.4) 0px 0px 12px 1px',
+			featurecard: '0 10px 20px #0000001a'
   		},
   		colors: {
   			background: 'hsl(var(--background))',
