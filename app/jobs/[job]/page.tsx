@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { jobsData, JobsDetailsProps } from "../data"
 
 const JobsDesc = ({ params } : { params: {job: string} }) => {
-  console.log(params)
   const jobsid = jobsData.find(data => data.id === params.job)
   const jobsdetails: { key: keyof JobsDetailsProps, label: string }[] = [
     { key: "about_us", label: "About Us" },
