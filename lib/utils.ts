@@ -13,3 +13,9 @@ export function textGradient(gradient: string){
   }
   return style
 }
+
+export const twoColumnsMotion = {
+  initial: { opacity:0, y:20 },
+  whileInView: { opacity:1, y:0 },
+  transition: { delay:0.3 }
+}

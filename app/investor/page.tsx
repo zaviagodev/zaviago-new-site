@@ -111,7 +111,7 @@ const InvestorPage = () => {
       <section className="flex flex-col gap-10 py-20">
         <h2 className="text-4xl font-semibold small-container">Making commerce better for everyone in everything we do.</h2>
 
-        <ImgPlaceholder height="600px" width="1600px" className="mx-auto">
+        <ImgPlaceholder height="600px" className="mx-auto">
           IMAGE PLACEHOLDER
         </ImgPlaceholder>
       </section>

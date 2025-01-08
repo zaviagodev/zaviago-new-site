@@ -1,5 +1,11 @@
+"use client"
+
 import ImgPlaceholder from "@/components/ImgPlaceholder"
 import PhoneConnection from "@/components/PhoneConnection"
+import { twoColumnsMotion } from "@/lib/utils"
+import { motion } from "framer-motion"
+import Image from "next/image"
+import crmMain from "@/public/crm-2.png"
 
 const CRMPage = () => {
   return (
@@ -9,10 +15,16 @@ const CRMPage = () => {
           <h2 className="text-3xl">CRM System for</h2>
           <h1 className="text-[180px] leading-[150px]">Points & Rewards</h1>
         </div>
-
-        <ImgPlaceholder height="600px">
+        {/* <ImgPlaceholder height="600px">
           <p className="text-center">IMAGE OF THE CRM PAGE</p>
-        </ImgPlaceholder>
+        </ImgPlaceholder> */}
+        <motion.div
+          initial={{ scale:0.1,opacity:0 }}
+          animate={{ scale:1,opacity:1 }}
+          transition={{ duration:1.5 }}
+        >
+          <Image src={crmMain} alt="Points and Rewards" className="-translate-y-20 bg-[#FFFFFF80] p-8"/>
+        </motion.div>
       </section>
 
       <section className="flex flex-col gap-10 py-20 main-container">
@@ -23,10 +35,10 @@ const CRMPage = () => {
 
         <ImgPlaceholder height="600px">PHONE PLACEHOLDER</ImgPlaceholder>
 
-        <div className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20">
+        <motion.div className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20" {...twoColumnsMotion}>
           <h2 className="p-12">ดึงดูดลูกค้าของคุณเข้าสู่ระบบ<span className="text-shadegray-300">สะสมแต้ม สร้างของรางวัล เพิ่มคูปอง มอบสิทธิพิเศษ</span> กระตุ้นการขายอย่างต่อเนื่อง</h2>
           <h2 className="p-12">เข้าถึงได้ง่ายผ่าน<span className="text-shadegray-300">แพลตฟอร์มออนไลน์</span> ที่คุณสามารถสร้างสรรค์ จัดการ ปรับแต่ง ตรงตามใจคุณ</h2>
-        </div>
+        </motion.div>
       </section>
 
       <PhoneConnection />
@@ -35,10 +47,10 @@ const CRMPage = () => {
         <h2 className="sub-header text-center font-semibold">ใช้ง่าย ฟีเจอร์เต็ม เปิดตัวระบบสมาชิก<br/>ของคุณเพียงไม่กี่คลิก</h2>
         <ImgPlaceholder height="600px">PHONE IMAGE</ImgPlaceholder>
 
-        <div className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20">
+        <motion.div className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20" {...twoColumnsMotion}>
           <h2 className="p-12">แอดมินสามารถจัดการแต้มลูกค้าอย่างง่ายดายตามยอดขำระเงินและ ลูกค้าสามารถใช้แต้มในการแลกของรางวัลผ่านหน้าเว็บไซต์</h2>
           <h2 className="p-12">โดยคุณสามารถมีเว็บไซต์เหมือนซูปเปอร์แอปที่ตอบโจทย์รูปแบบธุรกิจของคุณโดยไม่จำเป็นต้องใช้เงินมหาศาล</h2>
-        </div>
+        </motion.div>
       </section>
 
       <section className="bg-shadegray-500 py-20">
@@ -47,10 +59,10 @@ const CRMPage = () => {
 
           <ImgPlaceholder height="600px">PHONE IMAGE</ImgPlaceholder>
 
-          <div className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20">
+          <motion.div className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20" {...twoColumnsMotion}>
             <h2 className="p-12">เชื่อมต่อกับ LINE OA ของธุรกิจคุณ เพื่อให้ลูกค้าสามารถเช็คพอยท์ แลกของรางวัล และใช้คูปองได้สะดวกขึ้น</h2>
             <h2 className="p-12">เพียงสแกน QR CODE และกรอก OTP ก็สมัครเป็นสมาชิกได้ทันทีพร้อมสะสมแต้ม</h2>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -85,10 +97,10 @@ const CRMPage = () => {
           </ImgPlaceholder>
         </div>
 
-        <div className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4">
+        <motion.div className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4" {...twoColumnsMotion}>
           <h2 className="p-12">รวมทุกฟีเจอร์ การจัดการธุรกิจ ออนไลน์และออฟไลน์ จัดการคำสั่งซื้ออย่างเป็นระบบ สุดปังกับฟีเจอร์ที่ครอบคลุมทุกรูปแบบ</h2>
           <h2 className="p-12">ไม่ว่าคุณจะมีกี่ช่องทางการขายก็จัดการได้ ช่วยลดเวลาในการทำงาน และเพิ่มโอกาสในการสร้างกำไร</h2>
-        </div>
+        </motion.div>
       </section>
 
       <section className="bg-black -mb-20 py-20 main-container flex flex-col gap-10">
@@ -103,10 +115,10 @@ const CRMPage = () => {
 
         <ImgPlaceholder height="600px">SCAN PHONE PLACEHOLDER</ImgPlaceholder>
 
-        <div className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4">
+        <motion.div className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4" {...twoColumnsMotion}>
           <h2 className="p-12">ดึงดูดลูกค้าของคุณเข้าสู่ระบบสะสมแต้ม สร้างของรางวัล เพิ่มคูปอง มอบสิทธิพิเศษ กระตุ้นการขายอย่างต่อเนื่อง</h2>
           <h2 className="p-12">เข้าถึงได้ง่ายผ่านแพลตฟอร์มออนไลน์ ที่คุณสามารถสร้างสรรค์ จัดการ ปรับแต่ง ตรงตามใจคุณ</h2>
-        </div>
+        </motion.div>
       </section>
     </section>
   )

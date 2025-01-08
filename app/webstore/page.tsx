@@ -1,10 +1,14 @@
+"use client"
+
 import MainDashboard from "@/components/dashboard/main-dashboard"
 import ProductCard from "@/components/ecommerce/product-card"
 import ProductDashboard from "@/components/ecommerce/product-dashboard"
 import SingleProduct from "@/components/ecommerce/single-product"
 import ImgPlaceholder from "@/components/ImgPlaceholder"
 import { Button } from "@/components/ui/button"
+import { twoColumnsMotion } from "@/lib/utils"
 import headphoneImg from "@/public/mock-products/headphone.png"
+import { motion } from "framer-motion"
 
 const WebstorePage = () => {
   return (
@@ -57,10 +61,10 @@ const WebstorePage = () => {
         </aside>
       </section>
 
-      <div className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20">
+      <motion.div className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20" {...twoColumnsMotion}>
         <h2 className="p-12">รวมทุกฟีเจอร์ การจัดการธุรกิจ ออนไลน์และออฟไลน์ <span className="text-mainpurple">จัดการคำสั่งซื้ออย่างเป็นระบบ</span> สุดปังกับฟีเจอร์ที่ครอบคลุมทุกรูปแบบ</h2>
         <h2 className="p-12">ไม่ว่าคุณจะมีกี่ช่องทางการขายก็<span className="text-mainpurple">จัดการได้ ช่วยลดเวลาในการทำงาน และเพิ่มโอกาส</span>ในการสร้างกำไร</h2>
-      </div>
+      </motion.div>
 
       <section className="!p-40 grid md:grid-cols-2 main-container items-center gap-10">
         <p className="font-medium text-xl text-left text-shadegray-200">หน้าเว็บแบบ Responsive Design รองรับทุกหน้าจอ <span className="text-shadegray-400">ทั้ง Desktop และ Mobile ไม่ว่าจะเปิดร้านจากหน้าจออุปกรณ์ไหน ๆ</span> ก็ใช้งานได้อย่างสมบูรณ์และเหมาะสม</p>
@@ -93,10 +97,10 @@ const WebstorePage = () => {
         </div>
       </section>
 
-      <div className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4">
+      <motion.div className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4" {...twoColumnsMotion}>
         <h2 className="p-12">หน้าสั่งซื้อสินค้าที่ สวยงาม ทันสมัย ใช้งานง่าย ยืดหยุ่นกว่าเดิม เพิ่มยอดด้วยความเร็วที่สูง ลดการโหลดข้อมูลช้า</h2>
         <h2 className="p-12">ทุกออเดอร์จะถูกสร้างเป็นบิลออนไลน์ ลูกค้าสามารถดูรายละเอียด จ่ายเงิน ติดตามสถานะสินค้าได้อย่างสะดวกสบาย</h2>
-      </div>
+      </motion.div>
     </section>
   )
 }

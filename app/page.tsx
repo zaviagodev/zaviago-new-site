@@ -2,10 +2,9 @@
 
 import MainDashboard from "@/components/dashboard/main-dashboard";
 import ViewMoreSheet from "@/components/main/ViewMoreSheet";
-import { Bento } from "@/components/main/Bento";
 import { orderManagementSystems, storefrontSystems, trustedBrands, siteBuilderSystems, lineOASystems, ImgList, workdaySystems, salesHubSystems, dataInsightSystems, inStoreSystems } from "./data";
 import HeroVideoDialog from "@/components/ui/hero-video-dialog";
-import { textGradient } from "@/lib/utils";
+import { textGradient, twoColumnsMotion } from "@/lib/utils";
 import Link from "next/link";
 import ImgPlaceholder from "@/components/ImgPlaceholder";
 import PhoneConnection from "@/components/PhoneConnection";
@@ -80,18 +79,16 @@ export default function Home() {
         </div>
         <motion.div 
           className="font-medium text-2xl text-shadegray-200 grid md:grid-cols-2 gap-4"
-          initial={{ opacity:0, y:20 }}
-          whileInView={{ opacity:1, y:0 }}
-          transition={{ delay:0.3 }}
+          {...twoColumnsMotion}
         >
           <h2 className="p-12">รวมทุกฟีเจอร์ การจัดการธุรกิจ ออนไลน์และออฟไลน์ <span className="text-mainpurple">จัดการคำสั่งซื้ออย่างเป็นระบบ</span> สุดปังกับฟีเจอร์ที่ครอบคลุมทุกรูปแบบ</h2>
           <h2 className="p-12">ไม่ว่าคุณจะมีกี่ช่องทางการขายก็จัดการได้ <span className="text-mainpurple">ช่วยลดเวลาในการทำงาน และเพิ่มโอกาส</span>ในการสร้างกำไร</h2>
         </motion.div>
         <ViewMoreSheet buttonText="More on WorkSpace" title="workspace." desc="ระบบจัดการงานธุรกิจทั้งหมดของคุณในที่เดียว">
-          <div className="font-medium text-2xl text-shadegray-200 grid md:grid-cols-2 gap-4">
+          <motion.div className="font-medium text-2xl text-shadegray-200 grid md:grid-cols-2 gap-4" {...twoColumnsMotion}>
             <h2 className="p-12">รวมทุกฟีเจอร์ การจัดการธุรกิจ ออนไลน์และออฟไลน์ <span className="text-mainpurple">จัดการคำสั่งซื้ออย่างเป็นระบบ</span> สุดปังกับฟีเจอร์ที่ครอบคลุมทุกรูปแบบ</h2>
             <h2 className="p-12">ไม่ว่าคุณจะมีกี่ช่องทางการขายก็จัดการได้ <span className="text-mainpurple">ช่วยลดเวลาในการทำงาน และเพิ่มโอกาส</span>ในการสร้างกำไร</h2>
-          </div>
+          </motion.div>
         </ViewMoreSheet>
       </section>
 
@@ -114,9 +111,7 @@ export default function Home() {
 
         <motion.div 
           className="small-container font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20"
-          initial={{ opacity:0, y:20 }}
-          whileInView={{ opacity:1, y:0 }}
-          transition={{ delay:0.3 }}
+          {...twoColumnsMotion}
         >
           <h2 className="p-12">ให้คุณมั่นใจได้ตั้งแต่เริ่มสร้างเว็บจนถึงยอดขายร้อยล้าน <span className="text-mainpurple">ด้วยเครื่องมือสร้างเว็บไซต์ที่ทรงพลัง</span> สุดปังกับฟีเจอร์และการทำการตลาด</h2>
           <h2 className="p-12">ลูกค้าของคุณเข้าถึงเว็บไซต์ได้มากขึ้น <span className="text-mainpurple">รองรับทุกรูปแบบไม่ว่าจะเป็น คอมพิวเตอร์ หรือ บนมือถือ</span> เพื่อมุ่งสู่ยอดขายที่คุณต้องการ</h2>
@@ -164,9 +159,7 @@ export default function Home() {
 
         <motion.div 
           className="font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20"
-          initial={{ opacity:0, y:20 }}
-          whileInView={{ opacity:1, y:0 }}
-          transition={{ delay:0.3 }}
+          {...twoColumnsMotion}
         >
           <h2 className="p-12">ไม่ว่าใครก็สามารถสร้างสรรค์เว็บไซต์ที่เป็นมากกว่าเว็บไซต์ได้! จัดการปรับแต่งหน้าเว็บตามที่คุณต้องการได้ง่าย ๆ</h2>
           <h2 className="p-12">รองรับทั้งคอมพิวเตอร์ และแท็บเล็ต ไม่ต้องลงโปรแกรม เปิดผ่านเบราว์เซอร์ ใช้งานสะดวกไม่ว่าจะทำที่ไหนก็ตามใจคุณ</h2>
@@ -198,9 +191,7 @@ export default function Home() {
 
         <motion.div 
           className="font-medium text-2xl text-left text-shadegray-200 grid md:grid-cols-2 gap-4 pt-20"
-          initial={{ opacity:0, y:20 }}
-          whileInView={{ opacity:1, y:0 }}
-          transition={{ delay:0.3 }}
+          {...twoColumnsMotion}
         >
           <h2 className="p-12">ดึงดูดลูกค้าของคุณเข้าสู่ระบบ<span className="text-mainpurple">สะสมแต้ม สร้างของรางวัล เพิ่มคูปอง มอบสิทธิพิเศษ</span> กระตุ้นการขายอย่างต่อเนื่อง</h2>
           <h2 className="p-12">เข้าถึงได้ง่ายผ่าน<span className="text-mainpurple">แพลตฟอร์มออนไลน์</span> ที่คุณสามารถสร้างสรรค์ จัดการ ปรับแต่ง ตรงตามใจคุณ</h2>

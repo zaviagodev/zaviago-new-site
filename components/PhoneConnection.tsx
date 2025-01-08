@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import phoneFrame from "@/public/phone-frame.png"
 import PointsRewards from "./ecommerce/points-rewards"
