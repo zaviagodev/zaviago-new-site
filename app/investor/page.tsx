@@ -103,9 +103,7 @@ const InvestorPage = () => {
 
       <section className="main-container flex flex-col gap-10">
         <h2 className="text-4xl font-semibold"><span className="text-mainpurple">Launching 100+</span> features and updates every six months</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
-          <FeatureCards />
-        </div>
+        <FeatureCards />
         <h2 className="text-shadegray-400 text-[42px] md:text-[56px] font-semibold leading-[1.2em] tracking-[-0.8px]">With solutions that make it easier for merchants from simple to <span className="text-mainpurple">ERP Platform</span></h2>
         <p className="font-medium text-2xl text-left text-shadegray-200">So that businesses never need to leave Zaviago platform, from first sales to full scale</p>
       </section>

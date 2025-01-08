@@ -1,11 +1,6 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+"use client"
+
+import { Card } from "@/components/ui/card"
 import {
   Accordion,
   AccordionContent,
@@ -14,6 +9,7 @@ import {
 } from "@/components/ui/accordion"
 import { Box, CheckCircle, CircleUserRound, Clipboard, Crown, Dot, Gift, HandCoins, List, PlusCircle, ReceiptText, Settings, ShoppingBag, SquarePen, Tag, Ticket, Trophy, Truck, Warehouse } from "lucide-react"
 import { ReactNode } from "react"
+import { motion } from "framer-motion"
 
 interface FeatureCardProps {
   title: string
@@ -25,7 +21,7 @@ interface FeatureCardListsProps extends FeatureCardProps {
 }
 
 const FeatureCards = () => {
-  const iconClassName = "h-4 w-4"
+  const iconClassName = "h-4 w-4";
   const feature_card_list: FeatureCardListsProps[] = [
     {
       title:"สินค้า",
@@ -146,32 +142,34 @@ const FeatureCards = () => {
   ]
 
   return (
-    <>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
       {feature_card_list.map(list => (
-        <Card key={list.title} className="!p-6 w-full shadow-featurecard">
-          <Accordion type="single" className="w-full" defaultValue={list.title}>
-            <AccordionItem value={list.title} className="border-0">
-                <AccordionTrigger className="p-0">
-                  <div className="flex items-center gap-2">
-                    {list.icon}
-                    {list.title}
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="p-0 pt-4">
-                  <ul className="pl-4 flex flex-col gap-4">
-                    {list.sublist?.map(l => (
-                      <li key={l.title} className="flex items-center gap-2">
-                        {l.icon}
-                        {l.title}
-                      </li>
-                    ))}
-                  </ul>
-                </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </Card>
+        <motion.div className="h-full">
+          <Card key={list.title} className="!p-6 h-full w-full shadow-featurecard">
+            <Accordion type="single" className="w-full" defaultValue={list.title}>
+              <AccordionItem value={list.title} className="border-0">
+                  <AccordionTrigger className="p-0">
+                    <div className="flex items-center gap-2">
+                      {list.icon}
+                      {list.title}
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="p-0 pt-4">
+                    <ul className="pl-4 flex flex-col gap-4">
+                      {list.sublist?.map(l => (
+                        <li key={l.title} className="flex items-center gap-2">
+                          {l.icon}
+                          {l.title}
+                        </li>
+                      ))}
+                    </ul>
+                  </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </Card>
+        </motion.div>
       ))}
-    </>
+    </div>
   )
 }
 
