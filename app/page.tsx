@@ -61,7 +61,23 @@ export default function Home() {
       </section>
 
       <section className="small-container flex flex-col gap-10 p-10">
-        {/* <Bento /> */}
+        <div className="grid lg:grid-cols-2 gap-5">
+          <div className="col-span-2 border rounded-xl overflow-hidden h-[570px]">
+            <aside className="overflow-hidden relative shadow-main rounded-lg translate-x-5 translate-y-20 absolute">
+              <MainDashboard />
+            </aside>
+          </div>
+          <div className="border rounded-xl overflow-hidden flex-wrap h-[600px]">
+            <aside className="overflow-hidden w-[200%] relative shadow-main rounded-lg translate-x-5 translate-y-10 absolute">
+              <MainDashboard />
+            </aside>
+          </div>
+          <div className="border rounded-xl overflow-hidden flex-wrap h-[600px]">
+            <aside className="overflow-hidden w-[200%] relative shadow-main rounded-lg translate-x-5 translate-y-10 absolute">
+              <MainDashboard />
+            </aside>
+          </div>
+        </div>
         <motion.div 
           className="font-medium text-2xl text-shadegray-200 grid md:grid-cols-2 gap-4"
           initial={{ opacity:0, y:20 }}
@@ -108,12 +124,9 @@ export default function Home() {
 
         <motion.div 
           className="flex items-center main-container"
-          initial={{ scale:0.8 }}
-          ref={productsRef}
-          style={{ scale:scrollYProgress }}
         >
-          <ProductCard imgSrc={headphoneImg} title="Headphone" category="Pomelo" cardClassName="-mr-8 relative z-[1] scale-[0.9]"/>
-          <ProductCard imgSrc={bagImg} title="Bag" category="Adidas" cardClassName="-mr-8 relative z-[2] scale-[0.95]"/>
+          <ProductCard imgSrc={headphoneImg} title="Headphone" category="Pomelo" cardClassName="-mr-8 relative z-[1] scale-[0.9]" x={200}/>
+          <ProductCard imgSrc={bagImg} title="Bag" category="Adidas" cardClassName="-mr-8 relative z-[2] scale-[0.95]" x={100}/>
           <ProductCard imgSrc={headphoneImg} title="Headphone" category="Nike" cardClassName="m-0 relative z-[3]"/>
           <ProductCard imgSrc={headphoneImg} title="Headphone" category="Nanyang" cardClassName="-ml-8 relative z-[2] scale-[0.95]"/>
           <ProductCard imgSrc={headphoneImg} title="Headphone" category="Edifier" cardClassName="-ml-8 relative z-[1] scale-[0.9]"/>
