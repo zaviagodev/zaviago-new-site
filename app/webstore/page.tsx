@@ -19,9 +19,9 @@ const WebstorePage = () => {
           <h1 className="text-[180px] leading-[150px]">ใหม่ของคุณ</h1>
         </div>
 
-        <aside className="overflow-hidden relative shadow-main rounded-lg">
+        <motion.aside className="overflow-hidden relative shadow-main rounded-lg" initial={{ scale:0.1, opacity:0, top:-300 }} animate={{ scale:1, opacity:1, top:0 }} transition={{ duration:1.5 }}>
           <SingleProduct imgSrc={headphoneImg} title="Headphone"/>
-        </aside>
+        </motion.aside>
 
         <Button>เปิดเว็บฟรี</Button>
       </section>

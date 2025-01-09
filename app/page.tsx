@@ -14,6 +14,7 @@ import bagImg from "@/public/mock-products/bag.png"
 import ImgCarousel from "@/components/ImgCarousel";
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
+import ChatPage from "@/components/chat/chat-page";
 
 export default function Home() {
   const productsRef = useRef(null);
@@ -236,9 +237,12 @@ export default function Home() {
           <div className="flex flex-col items-center gap-[600px]">
             <h1 className="font-semibold sub-header">มีระบบ <span className="text-mainpurple">รวมแชทในที่เดียว</span><br/> ดูแลลูกค้าพร้อมกันได้หลายแพลตฟอร์ม</h1>
             <h1 className="max-w-[490px] font-semibold sub-header">เพิ่มประสิทธิภาพทีม<br/>แอดมินในการดูแล</h1>
-            <ImgPlaceholder height="600px" width="1000px" className="sticky bottom-4">DASHBOARD IMAGE</ImgPlaceholder>
           </div>
-
+        </div>
+        <aside className="overflow-hidden sticky bottom-4 shadow-main rounded-lg h-[calc(100vh_-_300px)] w-full max-w-[1000px]">
+          <ChatPage />
+        </aside>
+        <div className="small-container flex flex-col items-center gap-10">
           <div className="max-w-[490px] flex flex-col gap-5 pt-20">
             <h1 className="font-semibold sub-header">ตอบโจทย์การดูแล<br/>แชทครบวงจร</h1>
             <h2 className="font-medium text-2xl text-left text-shadegray-200">รองรับการแชทหลากหลายช่องทาง ทั้ง <span className="text-mainpurple">FB Messenger, Instagram, LINE Official, Telegram</span> และอื่นๆ ตอบสะดวก บริหารจัดการได้สบายในแอปเดียว</h2>

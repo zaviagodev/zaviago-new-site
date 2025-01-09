@@ -15,9 +15,6 @@ const CRMPage = () => {
           <h2 className="text-3xl">CRM System for</h2>
           <h1 className="text-[180px] leading-[150px]">Points & Rewards</h1>
         </div>
-        {/* <ImgPlaceholder height="600px">
-          <p className="text-center">IMAGE OF THE CRM PAGE</p>
-        </ImgPlaceholder> */}
         <motion.div
           initial={{ scale:0.1,opacity:0 }}
           animate={{ scale:1,opacity:1 }}

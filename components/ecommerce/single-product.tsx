@@ -1,11 +1,14 @@
+"use client"
+
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import Link from "next/link"
 import Image, { StaticImageData } from "next/image"
+import { useState } from "react"
+import { Minus, Plus } from "lucide-react"
 
 interface SingleProductProps {
   imgSrc: StaticImageData
@@ -15,6 +18,27 @@ interface SingleProductProps {
 }
 
 export default function SingleProduct({ imgSrc, category, title, desc } : SingleProductProps) {
+  const [count, setCount] = useState(1);
+  const [isAddedToCart, setIsAddedToCart] = useState(false);
+
+  const handleAddToCart = (e: any) => {
+    e.preventDefault();
+    setIsAddedToCart(true);
+    setTimeout(() => setIsAddedToCart(false), 2000)
+  }
+
+  const handleCountUp = (e: any) => {
+    e.preventDefault();
+    setCount(next => next +1)
+  }
+
+  const handleCountDown = (e: any) => {
+    e.preventDefault();
+    if (count !== 1){
+      setCount(prev => prev - 1)
+    }
+  }
+
   return (
     <div className="grid md:grid-cols-2 gap-6 lg:gap-12 items-start main-container mx-auto p-12 text-black bg-white rounded-md">
       <div className="grid gap-3 items-start">
@@ -23,8 +47,8 @@ export default function SingleProduct({ imgSrc, category, title, desc } : Single
             src={imgSrc}
             alt={title}
             width={600}
-            height={900}
-            className="aspect-[2/3] object-cover border w-full rounded-lg overflow-hidden"
+            height={600}
+            className="aspect-square object-cover border w-full rounded-lg overflow-hidden"
           />
           <div className="hidden md:grid grid-cols-4 gap-3">
             <button className="border hover:border-primary rounded-lg overflow-hidden transition-colors">
@@ -38,7 +62,7 @@ export default function SingleProduct({ imgSrc, category, title, desc } : Single
               <span className="sr-only">View Image 1</span>
             </button>
             <button className="border hover:border-primary rounded-lg overflow-hidden transition-colors">
-              <img
+              <Image
                 src="/placeholder.svg"
                 alt="Preview thumbnail"
                 width={100}
@@ -48,7 +72,7 @@ export default function SingleProduct({ imgSrc, category, title, desc } : Single
               <span className="sr-only">View Image 2</span>
             </button>
             <button className="border hover:border-primary rounded-lg overflow-hidden transition-colors">
-              <img
+              <Image
                 src="/placeholder.svg"
                 alt="Preview thumbnail"
                 width={100}
@@ -58,7 +82,7 @@ export default function SingleProduct({ imgSrc, category, title, desc } : Single
               <span className="sr-only">View Image 3</span>
             </button>
             <button className="border hover:border-primary rounded-lg overflow-hidden transition-colors">
-              <img
+              <Image
                 src="/placeholder.svg"
                 alt="Preview thumbnail"
                 width={100}
@@ -163,20 +187,17 @@ export default function SingleProduct({ imgSrc, category, title, desc } : Single
             <Label htmlFor="quantity" className="text-base">
               Quantity
             </Label>
-            <Select defaultValue="1">
-              <SelectTrigger className="w-24">
-                <SelectValue placeholder="Select" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="1">1</SelectItem>
-                <SelectItem value="2">2</SelectItem>
-                <SelectItem value="3">3</SelectItem>
-                <SelectItem value="4">4</SelectItem>
-                <SelectItem value="5">5</SelectItem>
-              </SelectContent>
-            </Select>
+            <div className="flex items-center gap-4">
+              <Button variant="ghost" onClick={handleCountDown} className="border px-3">
+                <Minus />
+              </Button>
+              <h3>{count}</h3>
+              <Button variant="ghost" onClick={handleCountUp} className="border px-3">
+                <Plus />
+              </Button>
+            </div>
           </div>
-          <Button size="lg">Add to cart</Button>
+          <Button size="lg" onClick={handleAddToCart} disabled={isAddedToCart}>{isAddedToCart ? "Item added to cart" : "Add to cart"}</Button>
         </form>
         <Separator />
         <div className="grid gap-4 text-sm leading-loose">

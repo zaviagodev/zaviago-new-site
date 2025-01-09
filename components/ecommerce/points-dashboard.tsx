@@ -6,7 +6,7 @@ import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@
 
 export default function PointsDashboard() {
   return (
-    <div className="grid min-h-screen gap-4 p-4 lg:grid-cols-[280px_1fr] md:gap-6">
+    <div className="grid min-h-screen gap-4 p-4 lg:grid-cols-[240px_1fr] md:gap-6">
       <div className="flex flex-col gap-2">
         <div className="flex h-14 items-center border-b">
           <Link href="#" className="flex items-center gap-2 font-semibold" prefetch={false}>
@@ -156,7 +156,7 @@ export default function PointsDashboard() {
             <CardContent>
               <div className="grid gap-4 md:grid-cols-2">
                 <Card>
-                  <div className="flex items-center space-x-4">
+                  <div className="flex flex-col items-center p-4">
                     <img
                       src="/placeholder.svg"
                       width="150"
@@ -175,7 +175,7 @@ export default function PointsDashboard() {
                   </div>
                 </Card>
                 <Card>
-                  <div className="flex items-center space-x-4">
+                  <div className="flex flex-col items-center p-4">
                     <img
                       src="/placeholder.svg"
                       width="150"
@@ -194,7 +194,7 @@ export default function PointsDashboard() {
                   </div>
                 </Card>
                 <Card>
-                  <div className="flex items-center space-x-4">
+                  <div className="flex flex-col items-center p-4">
                     <img
                       src="/placeholder.svg"
                       width="150"
@@ -213,7 +213,7 @@ export default function PointsDashboard() {
                   </div>
                 </Card>
                 <Card>
-                  <div className="flex items-center space-x-4">
+                  <div className="flex flex-col items-center p-4">
                     <img
                       src="/placeholder.svg"
                       width="150"

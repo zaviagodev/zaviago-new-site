@@ -38,7 +38,7 @@ export default function ChatPage() {
           <h2 className="text-lg font-semibold">Conversations</h2>
         </div>
         <div className="flex flex-col gap-4 px-4 py-2">
-          <Button className="flex items-center gap-3 rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-800" variant="ghost"
+          <Button className="flex items-center gap-3 rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-800 h-fit" variant="ghost"
             onClick={() => setUser({ name:"Changlin Yu", avatar:"CY" })}
           >
             <Avatar>
@@ -56,7 +56,7 @@ export default function ChatPage() {
             </div>
           </Button>
           <Button
-            className="flex items-center gap-3 rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-800" variant="ghost"
+            className="flex items-center gap-3 rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-800 h-fit" variant="ghost"
             onClick={() => setUser({ name:"Markus Zhang", avatar:"MZ" })}
           >
             <Avatar>
@@ -74,7 +74,7 @@ export default function ChatPage() {
             </div>
           </Button>
           <Button
-            className="flex items-center gap-3 rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-800" variant="ghost"
+            className="flex items-center gap-3 rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-800 h-fit" variant="ghost"
             onClick={() => setUser({ name:"Michael Justin", avatar:"MJ" })}
           >
             <Avatar>
